@@ -1,4 +1,4 @@
-package uk.gaz492.bamboofences;
+package uk.gaz492.bambooeverything;
 
 import net.fabricmc.api.ModInitializer;
 
