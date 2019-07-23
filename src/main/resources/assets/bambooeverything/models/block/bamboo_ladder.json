@@ -1,0 +1,119 @@
+{
+  "credit": "Made with Blockbench",
+  "textures": {
+    "all": "block/bamboo_stalk",
+    "particle": "block/bamboo_stalk"
+  },
+  "elements": [
+    {
+      "from": [14, 0, 14],
+      "to": [16, 16, 16],
+      "faces": {
+        "north": {"uv": [0, 0, 2, 16], "texture": "#all"},
+        "east": {"uv": [0, 0, 2, 16], "texture": "#all"},
+        "south": {"uv": [0, 0, 2, 16], "texture": "#all"},
+        "west": {"uv": [0, 0, 2, 16], "texture": "#all"},
+        "up": {"uv": [13, 0, 15, 2], "rotation": 90, "texture": "#all", "cullface": "up"},
+        "down": {"uv": [13, 4, 15, 6], "rotation": 270, "texture": "#all", "cullface": "down"}
+      }
+    },
+    {
+      "from": [0, 0, 14],
+      "to": [2, 16, 16],
+      "faces": {
+        "north": {"uv": [6, 0, 8, 16], "texture": "#all"},
+        "east": {"uv": [0, 0, 2, 16], "texture": "#all"},
+        "south": {"uv": [6, 0, 8, 16], "texture": "#all"},
+        "west": {"uv": [6, 0, 8, 16], "texture": "#all"},
+        "up": {"uv": [13, 0, 15, 2], "rotation": 90, "texture": "#all", "cullface": "up"},
+        "down": {"uv": [13, 4, 15, 6], "rotation": 270, "texture": "#all", "cullface": "down"}
+      }
+    },
+    {
+      "from": [2, 2, 15],
+      "to": [14, 4, 16],
+      "faces": {
+        "north": {"uv": [3, 0, 5, 16], "rotation": 270, "texture": "#all"},
+        "east": {"uv": [13, 0, 15, 2], "rotation": 180, "texture": "#all", "cullface": "up"},
+        "south": {"uv": [3, 0, 5, 16], "rotation": 90, "texture": "#all"},
+        "west": {"uv": [13, 4, 15, 6], "texture": "#all", "cullface": "down"},
+        "up": {"uv": [3, 0, 5, 16], "rotation": 90, "texture": "#all"},
+        "down": {"uv": [3, 0, 5, 16], "rotation": 90, "texture": "#all"}
+      }
+    },
+    {
+      "from": [2, 6, 15],
+      "to": [14, 8, 16],
+      "faces": {
+        "north": {"uv": [10, 0, 12, 16], "rotation": 270, "texture": "#all"},
+        "east": {"uv": [13, 0, 15, 2], "rotation": 180, "texture": "#all", "cullface": "up"},
+        "south": {"uv": [10, 0, 12, 16], "rotation": 90, "texture": "#all"},
+        "west": {"uv": [13, 4, 15, 6], "texture": "#all", "cullface": "down"},
+        "up": {"uv": [10, 0, 12, 16], "rotation": 90, "texture": "#all"},
+        "down": {"uv": [10, 0, 12, 16], "rotation": 90, "texture": "#all"}
+      }
+    },
+    {
+      "from": [2, 10, 15],
+      "to": [14, 12, 16],
+      "faces": {
+        "north": {"uv": [6, 0, 8, 16], "rotation": 270, "texture": "#all"},
+        "east": {"uv": [13, 0, 15, 2], "rotation": 180, "texture": "#all", "cullface": "up"},
+        "south": {"uv": [6, 0, 8, 16], "rotation": 90, "texture": "#all"},
+        "west": {"uv": [13, 4, 15, 6], "texture": "#all", "cullface": "down"},
+        "up": {"uv": [6, 0, 8, 16], "rotation": 90, "texture": "#all"},
+        "down": {"uv": [6, 0, 8, 16], "rotation": 90, "texture": "#all"}
+      }
+    },
+    {
+      "from": [2, 14, 15],
+      "to": [14, 16, 16],
+      "faces": {
+        "north": {"uv": [0, 0, 2, 16], "rotation": 270, "texture": "#all"},
+        "east": {"uv": [13, 0, 15, 2], "rotation": 180, "texture": "#all", "cullface": "up"},
+        "south": {"uv": [0, 0, 2, 16], "rotation": 90, "texture": "#all"},
+        "west": {"uv": [13, 4, 15, 6], "texture": "#all", "cullface": "down"},
+        "up": {"uv": [0, 0, 2, 16], "rotation": 90, "texture": "#all"},
+        "down": {"uv": [0, 0, 2, 16], "rotation": 90, "texture": "#all"}
+      }
+    }
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [30, 90, 0],
+      "translation": [-2.75, 0, -2.5],
+      "scale": [0.5, 0.5, 0.5]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [30, 90, 0],
+      "translation": [-2.75, 0, -2.5],
+      "scale": [0.5, 0.5, 0.5]
+    },
+    "firstperson_righthand": {
+      "rotation": [0, 90, 0],
+      "translation": [-1, -0.25, 1.75],
+      "scale": [0.5, 0.5, 0.5]
+    },
+    "firstperson_lefthand": {
+      "rotation": [0, 90, 0],
+      "translation": [-1, -0.25, 1.75],
+      "scale": [0.5, 0.5, 0.5]
+    },
+    "ground": {
+      "translation": [0, 0, -3.75],
+      "scale": [0.5, 0.5, 0.5]
+    },
+    "gui": {
+      "scale": [0.9, 0.9, 0.9]
+    },
+    "fixed": {
+      "translation": [0, 0, -7.75]
+    }
+  },
+  "groups": [
+    {
+      "name": "bamboo1_age0",
+      "children": [0, 1, 2, 3, 4, 5]
+    }
+  ]
+}
