@@ -12,6 +12,9 @@ group = project.maven_group
 
 minecraft {
 }
+repositories {
+	maven { url 'https://jitpack.io' }
+}
 
 dependencies {
 	//to change the versions see the gradle.properties file
@@ -21,6 +24,9 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modCompile "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+	modCompile 'com.github.Gaz492:Ladder-API:971a97e834'
+	include 'com.github.Gaz492:Ladder-API:971a97e834'
 
 	// PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
 	// You may need to force-disable transitiveness on them.
