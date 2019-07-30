@@ -1,19 +1,17 @@
 {
   "type": "crafting_shaped",
   "pattern": [
-    "OBO",
-    "OBO"
+    "BB",
+    "BB",
+    "BB"
   ],
   "key": {
     "B": {
-      "item": "minecraft:bamboo"
-    },
-    "O": {
       "item": "bambooeverything:bamboo_bundle"
     }
   },
   "result": {
-    "item": "bambooeverything:bamboo_fence",
+    "item": "bambooeverything:bamboo_door",
     "count": 3
   }
 }

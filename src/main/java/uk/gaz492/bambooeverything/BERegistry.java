@@ -18,6 +18,10 @@ import java.util.function.Supplier;
 
 public class BERegistry {
 
+    //Bundle
+    public static Block bambooBundleBlock;
+    public static Item bambooBundleItem;
+
     //Ladder
     public static Block bambooLadderBlock;
     public static Item bambooLadderItem;
@@ -29,10 +33,10 @@ public class BERegistry {
     public static Item bambooFenceGateItem;
 
     //(Trap)Door
-    public final Block bambooDoorBlock;
-    public final Item bambooDoorItem;
-    public final Block bambooTrapDoorBlock;
-    public final Item bambooTrapDoorItem;
+    public static Block bambooDoorBlock;
+    public static Item bambooDoorItem;
+    public static Block bambooTrapDoorBlock;
+    public static Item bambooTrapDoorItem;
 
     public static ItemGroup creativeTab = FabricItemGroupBuilder.build(new Identifier(ModInfo.ID + ":bambooeverything"), new Supplier<ItemStack>() {
         @Override
@@ -44,6 +48,9 @@ public class BERegistry {
     private final Item.Settings defaultSettings = new Item.Settings().group(creativeTab);
 
     BERegistry(BambooEverything mod){
+        //Bundle
+        this.bambooBundleBlock = this.blockRegister("bamboo_bundle", new BambooBundleBlock(FabricBlockSettings.of(Material.BAMBOO).sounds(BlockSoundGroup.BAMBOO).build()));
+        this.bambooBundleItem = this.itemRegister("bamboo_bundle", this.bambooBundleBlock, this.defaultSettings);
         //Ladder
         this.bambooLadderBlock = this.blockRegister("bamboo_ladder", new BambooLadderBlock(FabricBlockSettings.of(Material.BAMBOO).sounds(BlockSoundGroup.LADDER).build()));
         this.bambooLadderItem = this.itemRegister("bamboo_ladder", this.bambooLadderBlock, this.defaultSettings);

@@ -7,6 +7,5 @@ public class BambooTrapDoorBlock extends TrapdoorBlock {
 
     public BambooTrapDoorBlock(Settings settings) {
         super(settings);
-
     }
 }
