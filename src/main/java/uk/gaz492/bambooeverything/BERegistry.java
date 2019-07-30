@@ -11,9 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import uk.gaz492.bambooeverything.blocks.BambooFenceBlock;
-import uk.gaz492.bambooeverything.blocks.BambooFenceGateBlock;
-import uk.gaz492.bambooeverything.blocks.BambooLadderBlock;
+import uk.gaz492.bambooeverything.blocks.*;
 import uk.gaz492.bambooeverything.util.ModInfo;
 
 import java.util.function.Supplier;
@@ -31,10 +29,10 @@ public class BERegistry {
     public static Item bambooFenceGateItem;
 
     //(Trap)Door
-//    public final Block bambooDoorBlock;
-//    public final Item bambooDoorItem;
-//    public final Block bambooTrapDoorBlock;
-//    public final Item bambooTrapDoorItem;
+    public final Block bambooDoorBlock;
+    public final Item bambooDoorItem;
+    public final Block bambooTrapDoorBlock;
+    public final Item bambooTrapDoorItem;
 
     public static ItemGroup creativeTab = FabricItemGroupBuilder.build(new Identifier(ModInfo.ID + ":bambooeverything"), new Supplier<ItemStack>() {
         @Override
@@ -54,6 +52,11 @@ public class BERegistry {
         this.bambooFenceItem = this.itemRegister("bamboo_fence", this.bambooFenceBlock, this.defaultSettings);
         this.bambooFenceGateBlock = this.blockRegister("bamboo_fence_gate", new BambooFenceGateBlock(FabricBlockSettings.of(Material.BAMBOO).strength(2.0f, 3.0f).sounds(BlockSoundGroup.BAMBOO).build()));
         this.bambooFenceGateItem = this.itemRegister("bamboo_fence_gate", this.bambooFenceGateBlock, this.defaultSettings);
+        //Door
+        this.bambooDoorBlock = this.blockRegister("bamboo_door", new BambooDoorBlock(FabricBlockSettings.of(Material.BAMBOO).strength(3.0F, 3.0F).sounds(BlockSoundGroup.BAMBOO).build()));
+        this.bambooDoorItem = this.itemRegister("bamboo_door", this.bambooDoorBlock, this.defaultSettings);
+        this.bambooTrapDoorBlock = this.blockRegister("bamboo_trapdoor", new BambooTrapDoorBlock(FabricBlockSettings.of(Material.BAMBOO).strength(3.0F, 3.0F).sounds(BlockSoundGroup.BAMBOO).build()));
+        this.bambooTrapDoorItem = this.itemRegister("bamboo_trapdoor", this.bambooTrapDoorBlock, this.defaultSettings);
     }
 
     private Block blockRegister(String id, Block block){
