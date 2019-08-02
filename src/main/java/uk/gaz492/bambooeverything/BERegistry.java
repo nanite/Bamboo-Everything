@@ -55,9 +55,9 @@ public class BERegistry {
         this.bambooLadderBlock = this.blockRegister("bamboo_ladder", new BambooLadderBlock(FabricBlockSettings.of(Material.BAMBOO).strength(0.4F,0.4F).sounds(BlockSoundGroup.LADDER).build()));
         this.bambooLadderItem = this.itemRegister("bamboo_ladder", this.bambooLadderBlock, this.defaultSettings);
         //Fence
-        this.bambooFenceBlock = this.blockRegister("bamboo_fence", new BambooFenceBlock(FabricBlockSettings.of(Material.BAMBOO).strength(2.0f, 3.0f).sounds(BlockSoundGroup.BAMBOO).build()));
+        this.bambooFenceBlock = this.blockRegister("bamboo_fence", new BambooFenceBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 3.0f).sounds(BlockSoundGroup.BAMBOO).build()));
         this.bambooFenceItem = this.itemRegister("bamboo_fence", this.bambooFenceBlock, this.defaultSettings);
-        this.bambooFenceGateBlock = this.blockRegister("bamboo_fence_gate", new BambooFenceGateBlock(FabricBlockSettings.of(Material.BAMBOO).strength(2.0f, 3.0f).sounds(BlockSoundGroup.BAMBOO).build()));
+        this.bambooFenceGateBlock = this.blockRegister("bamboo_fence_gate", new BambooFenceGateBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 3.0f).sounds(BlockSoundGroup.BAMBOO).build()));
         this.bambooFenceGateItem = this.itemRegister("bamboo_fence_gate", this.bambooFenceGateBlock, this.defaultSettings);
         //Door
         this.bambooDoorBlock = this.blockRegister("bamboo_door", new BambooDoorBlock(FabricBlockSettings.of(Material.BAMBOO).strength(3.0F, 3.0F).sounds(BlockSoundGroup.BAMBOO).build()));
