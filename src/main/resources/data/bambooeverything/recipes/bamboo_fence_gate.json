@@ -9,7 +9,7 @@
       "item": "minecraft:bamboo"
     },
     "O": {
-      "item": "minecraft:oak_planks"
+      "item": "bambooeverything:bamboo_bundle"
     }
   },
   "result": {
