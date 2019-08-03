@@ -1,9 +1,9 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "bambooeverything:block/bamboo_door_bottom",
+		"0": "bambooeverything:block/bamboo_trapdoor",
 		"1": "bambooeverything:block/bamboo_door_ends",
-		"particle": "bambooeverything:block/bamboo_door_bottom"
+		"particle": "bambooeverything:block/bamboo_trapdoor"
 	},
 	"elements": [
 		{
@@ -11,9 +11,9 @@
 			"to": [16, 16, 16],
 			"faces": {
 				"north": {"uv": [0, 0, 16, 16], "texture": "#0"},
-				"east": {"uv": [13, 0, 16, 16], "texture": "#0", "cullface": "east"},
+				"east": {"uv": [9, 0, 13, 16], "texture": "#0", "cullface": "east"},
 				"south": {"uv": [0, 0, 16, 16], "texture": "#0", "cullface": "south"},
-				"west": {"uv": [16, 0, 13, 16], "texture": "#0", "cullface": "west"},
+				"west": {"uv": [4, 0, 0, 16], "texture": "#0", "cullface": "west"},
 				"up": {"uv": [0, 3, 16, 0], "texture": "#1", "cullface": "up"},
 				"down": {"uv": [0, 0, 16, 3], "texture": "#1", "cullface": "down"}
 			}
