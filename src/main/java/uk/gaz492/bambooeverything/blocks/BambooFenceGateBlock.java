@@ -7,6 +7,6 @@ import net.minecraft.block.material.Material;
 
 public class BambooFenceGateBlock extends FenceGateBlock {
     public BambooFenceGateBlock() {
-        super(Block.Properties.create(Material.BAMBOO).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.BAMBOO));
+        super(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.BAMBOO));
     }
 }
