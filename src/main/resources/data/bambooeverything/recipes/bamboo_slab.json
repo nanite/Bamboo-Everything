@@ -1,0 +1,15 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "item": "bambooeverything:bamboo_bundle"
+    }
+  },
+  "result": {
+    "item": "bambooeverything:bamboo_slab",
+    "count": 6
+  }
+}

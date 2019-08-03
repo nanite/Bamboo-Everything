@@ -19,6 +19,8 @@ public class BEEventHandler {
         event.getRegistry().register(BambooEverything.bambooDoorBlock.setRegistryName(MOD_ID, "bamboo_door"));
         event.getRegistry().register(BambooEverything.bambooTrapDoorBlock.setRegistryName(MOD_ID, "bamboo_trapdoor"));
         event.getRegistry().register(BambooEverything.bambooBundleBlock.setRegistryName(MOD_ID, "bamboo_bundle"));
+        event.getRegistry().register(BambooEverything.bambooSlabBlock.setRegistryName(MOD_ID, "bamboo_slab"));
+        event.getRegistry().register(BambooEverything.bambooStairsBlock.setRegistryName(MOD_ID, "bamboo_stairs"));
     }
 
     @SubscribeEvent
@@ -29,5 +31,7 @@ public class BEEventHandler {
         event.getRegistry().register(new BlockItem(BambooEverything.bambooDoorBlock, new Item.Properties().group(BambooEverything.creativeTab)).setRegistryName(BambooEverything.bambooDoorBlock.getRegistryName()));
         event.getRegistry().register(new BlockItem(BambooEverything.bambooTrapDoorBlock, new Item.Properties().group(BambooEverything.creativeTab)).setRegistryName(BambooEverything.bambooTrapDoorBlock.getRegistryName()));
         event.getRegistry().register(new BlockItem(BambooEverything.bambooBundleBlock, new Item.Properties().group(BambooEverything.creativeTab)).setRegistryName(BambooEverything.bambooBundleBlock.getRegistryName()));
+        event.getRegistry().register(new BlockItem(BambooEverything.bambooSlabBlock, new Item.Properties().group(BambooEverything.creativeTab)).setRegistryName(BambooEverything.bambooSlabBlock.getRegistryName()));
+        event.getRegistry().register(new BlockItem(BambooEverything.bambooStairsBlock, new Item.Properties().group(BambooEverything.creativeTab)).setRegistryName(BambooEverything.bambooStairsBlock.getRegistryName()));
     }
 }

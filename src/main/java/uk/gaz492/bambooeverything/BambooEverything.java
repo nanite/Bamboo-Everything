@@ -15,6 +15,8 @@ public class BambooEverything {
     public static BambooDoorBlock bambooDoorBlock = new BambooDoorBlock();
     public static BambooTrapDoorBlock bambooTrapDoorBlock = new BambooTrapDoorBlock();
     public static BambooBundleBlock bambooBundleBlock = new BambooBundleBlock();
+    public static BambooStairsBlock bambooStairsBlock = new BambooStairsBlock();
+    public static BambooSlabBlock bambooSlabBlock = new BambooSlabBlock();
 
     public static final ItemGroup creativeTab = new ItemGroup(MOD_ID + ".bambooeverything") {
         @Override
