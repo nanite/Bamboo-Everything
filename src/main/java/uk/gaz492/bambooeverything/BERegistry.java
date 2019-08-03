@@ -22,6 +22,14 @@ public class BERegistry {
     public static Block bambooBundleBlock;
     public static Item bambooBundleItem;
 
+    //Slab
+    public static Block bambooSlabBlock;
+    public static Item bambooSlabItem;
+
+    //Stairs
+    public static Block bambooStairsBlock;
+    public static Item bambooStairsItem;
+
     //Ladder
     public static Block bambooLadderBlock;
     public static Item bambooLadderItem;
@@ -51,6 +59,12 @@ public class BERegistry {
         //Bundle
         this.bambooBundleBlock = this.blockRegister("bamboo_bundle", new BambooBundleBlock(FabricBlockSettings.of(Material.BAMBOO).strength(1.0f, 2.0f).sounds(BlockSoundGroup.BAMBOO).build()));
         this.bambooBundleItem = this.itemRegister("bamboo_bundle", this.bambooBundleBlock, this.defaultSettings);
+        //Slab
+        this.bambooSlabBlock = this.blockRegister("bamboo_slab", new BambooSlabBlock(FabricBlockSettings.of(Material.BAMBOO).strength(1.0f, 2.0f).sounds(BlockSoundGroup.BAMBOO).build()));
+        this.bambooSlabItem = this.itemRegister("bamboo_slab", this.bambooSlabBlock, this.defaultSettings);
+        //Stairs
+        this.bambooStairsBlock = this.blockRegister("bamboo_stairs", new BambooStairsBlock(bambooBundleBlock.getDefaultState(), FabricBlockSettings.of(Material.BAMBOO).strength(1.0f, 2.0f).sounds(BlockSoundGroup.BAMBOO).build()));
+        this.bambooStairsItem = this.itemRegister("bamboo_stairs", this.bambooStairsBlock, this.defaultSettings);
         //Ladder
         this.bambooLadderBlock = this.blockRegister("bamboo_ladder", new BambooLadderBlock(FabricBlockSettings.of(Material.BAMBOO).strength(0.4F,0.4F).sounds(BlockSoundGroup.LADDER).build()));
         this.bambooLadderItem = this.itemRegister("bamboo_ladder", this.bambooLadderBlock, this.defaultSettings);
