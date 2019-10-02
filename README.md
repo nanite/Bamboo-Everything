@@ -1,3 +1,6 @@
+Bamboo-Everything
+A Minecraft Mod
+
 # Fabric Example Mod
 
 ## Setup
