@@ -1,4 +1,5 @@
-This Is Minecraft Mod
+Bamboo-Everything
+A Minecraft Mod
 
 # Fabric Example Mod
 
