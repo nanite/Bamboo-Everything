@@ -66,8 +66,9 @@ public class BERegistry {
         this.bambooStairsBlock = this.blockRegister("bamboo_stairs", new BambooStairsBlock(bambooBundleBlock.getDefaultState(), FabricBlockSettings.of(Material.BAMBOO).strength(1.0f, 2.0f).sounds(BlockSoundGroup.BAMBOO).build()));
         this.bambooStairsItem = this.itemRegister("bamboo_stairs", this.bambooStairsBlock, this.defaultSettings);
         //Ladder
-        this.bambooLadderBlock = this.blockRegister("bamboo_ladder", new BambooLadderBlock(FabricBlockSettings.of(Material.BAMBOO).strength(0.4F,0.4F).sounds(BlockSoundGroup.LADDER).build()));
+        this.bambooLadderBlock = this.blockRegister("bamboo_ladder", new BambooLadderBlock(FabricBlockSettings.of(Material.BAMBOO).strength(0.4F,0.4F).sounds(BlockSoundGroup.LADDER).nonOpaque().build()));
         this.bambooLadderItem = this.itemRegister("bamboo_ladder", this.bambooLadderBlock, this.defaultSettings);
+
         //Fence
         this.bambooFenceBlock = this.blockRegister("bamboo_fence", new BambooFenceBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 3.0f).sounds(BlockSoundGroup.BAMBOO).build()));
         this.bambooFenceItem = this.itemRegister("bamboo_fence", this.bambooFenceBlock, this.defaultSettings);

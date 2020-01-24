@@ -28,6 +28,6 @@
   "depends": {
     "fabricloader": ">=0.4.0",
     "fabric": "*",
-    "ladderapi": ">=1.14.4-1.1.0"
+    "ladderapi": ">=1.15.2-1.0.0"
   }
 }
