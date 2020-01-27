@@ -12,6 +12,8 @@ import net.minecraft.pathfinding.PathType;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Direction;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
@@ -44,7 +46,7 @@ public class FenceGateBlockOverride extends FenceGateBlock implements IWaterLogg
     }
 
     @Override
-    public boolean onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
+    public ActionResultType onUse(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (state.get(OPEN)) {
             state = state.with(OPEN, false);
             worldIn.setBlockState(pos, state, 10);
@@ -62,7 +64,7 @@ public class FenceGateBlockOverride extends FenceGateBlock implements IWaterLogg
         }
 
         worldIn.playEvent(player, state.get(OPEN) ? 1008 : 1014, pos, 0);
-        return true;
+        return ActionResultType.SUCCESS;
     }
 
     @Override
@@ -104,6 +106,10 @@ public class FenceGateBlockOverride extends FenceGateBlock implements IWaterLogg
         return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
     }
 
+    private boolean isWall(BlockState blockState) {
+        return blockState.getBlock().isIn(BlockTags.WALLS);
+    }
+
     @Override
     public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos) {
         if (stateIn.get(WATERLOGGED)) {
@@ -113,6 +119,7 @@ public class FenceGateBlockOverride extends FenceGateBlock implements IWaterLogg
         if (stateIn.get(HORIZONTAL_FACING).rotateY().getAxis() != direction$axis) {
             return super.updatePostPlacement(stateIn, facing, facingState, worldIn, currentPos, facingPos);
         } else {
+//            boolean flag = this.isWall(facingState) || this.isWall(worldIn.getBlockState(currentPos.offset(facing.getOpposite())));
             boolean flag = this.isWall(facingState) || this.isWall(worldIn.getBlockState(currentPos.offset(facing.getOpposite())));
             return stateIn.with(IN_WALL, flag);
         }
