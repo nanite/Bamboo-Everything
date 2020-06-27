@@ -7,6 +7,6 @@ import net.minecraft.block.material.Material;
 
 public class BambooLadderBlock extends LadderBlock {
     public BambooLadderBlock() {
-        super(Block.Properties.create(Material.MISCELLANEOUS).hardnessAndResistance(0.4F).sound(SoundType.LADDER).nonOpaque());
+        super(Block.Properties.create(Material.MISCELLANEOUS).hardnessAndResistance(0.4F).sound(SoundType.LADDER).notSolid());
     }
 }

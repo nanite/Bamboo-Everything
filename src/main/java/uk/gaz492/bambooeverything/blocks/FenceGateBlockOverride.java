@@ -6,7 +6,7 @@ import net.minecraft.block.FenceGateBlock;
 import net.minecraft.block.IWaterLoggable;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.fluid.IFluidState;
+import net.minecraft.fluid.FluidState;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.pathfinding.PathType;
 import net.minecraft.state.BooleanProperty;
@@ -46,7 +46,7 @@ public class FenceGateBlockOverride extends FenceGateBlock implements IWaterLogg
     }
 
     @Override
-    public ActionResultType onUse(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
+    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (state.get(OPEN)) {
             state = state.with(OPEN, false);
             worldIn.setBlockState(pos, state, 10);
@@ -88,7 +88,7 @@ public class FenceGateBlockOverride extends FenceGateBlock implements IWaterLogg
     public BlockState getStateForPlacement(BlockItemUseContext context) {
         World world = context.getWorld();
         BlockPos blockpos = context.getPos();
-        IFluidState ifluidstate = context.getWorld().getFluidState(context.getPos());
+        FluidState ifluidstate = context.getWorld().getFluidState(context.getPos());
         boolean flag = world.isBlockPowered(blockpos);
         Direction direction = context.getPlacementHorizontalFacing();
         Direction.Axis direction$axis = direction.getAxis();
@@ -102,7 +102,7 @@ public class FenceGateBlockOverride extends FenceGateBlock implements IWaterLogg
     }
 
     @Override
-    public IFluidState getFluidState(BlockState state) {
+    public FluidState getFluidState(BlockState state) {
         return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
     }
 
