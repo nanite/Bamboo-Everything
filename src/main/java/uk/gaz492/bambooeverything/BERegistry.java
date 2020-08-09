@@ -82,10 +82,10 @@ public class BERegistry {
     }
 
     private Block blockRegister(String id, Block block){
-        return Registry.BLOCK.add(new Identifier(ModInfo.ID, id), block);
+        return Registry.register(Registry.BLOCK, new Identifier(ModInfo.ID, id), block);
     }
 
     private Item itemRegister (String id, Block block, Item.Settings settings){
-        return Registry.ITEM.add(new Identifier(ModInfo.ID, id), new BlockItem(block, settings));
+        return Registry.register(Registry.ITEM, new Identifier(ModInfo.ID, id), new BlockItem(block, settings));
     }
 }
