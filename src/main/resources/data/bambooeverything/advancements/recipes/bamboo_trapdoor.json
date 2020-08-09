@@ -16,7 +16,6 @@
         ]
       }
     },
-  "criteria": {
     "has_bundle": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
