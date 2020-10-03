@@ -1,6 +1,7 @@
 package uk.gaz492.bambooeverything;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
@@ -56,29 +57,44 @@ public class BERegistry {
     private final Item.Settings defaultSettings = new Item.Settings().group(creativeTab);
 
     BERegistry(BambooEverything mod){
+    	
         //Bundle
         this.bambooBundleBlock = this.blockRegister("bamboo_bundle", new BambooBundleBlock(FabricBlockSettings.of(Material.BAMBOO).strength(1.0f, 2.0f).sounds(BlockSoundGroup.BAMBOO)));
         this.bambooBundleItem = this.itemRegister("bamboo_bundle", this.bambooBundleBlock, this.defaultSettings);
+        FuelRegistry.INSTANCE.add(bambooBundleItem, 300);
+        
         //Slab
         this.bambooSlabBlock = this.blockRegister("bamboo_slab", new BambooSlabBlock(FabricBlockSettings.of(Material.BAMBOO).strength(1.0f, 2.0f).sounds(BlockSoundGroup.BAMBOO)));
         this.bambooSlabItem = this.itemRegister("bamboo_slab", this.bambooSlabBlock, this.defaultSettings);
+        FuelRegistry.INSTANCE.add(bambooSlabItem, 150);
+        
         //Stairs
         this.bambooStairsBlock = this.blockRegister("bamboo_stairs", new BambooStairsBlock(bambooBundleBlock.getDefaultState(), FabricBlockSettings.of(Material.BAMBOO).strength(1.0f, 2.0f).sounds(BlockSoundGroup.BAMBOO)));
         this.bambooStairsItem = this.itemRegister("bamboo_stairs", this.bambooStairsBlock, this.defaultSettings);
+        FuelRegistry.INSTANCE.add(bambooStairsItem, 300);
+        
         //Ladder
         this.bambooLadderBlock = this.blockRegister("bamboo_ladder", new BambooLadderBlock(FabricBlockSettings.of(Material.BAMBOO).strength(0.4F,0.4F).sounds(BlockSoundGroup.LADDER).nonOpaque()));
         this.bambooLadderItem = this.itemRegister("bamboo_ladder", this.bambooLadderBlock, this.defaultSettings);
-
+        FuelRegistry.INSTANCE.add(bambooLadderItem, 300);
+        
         //Fence
         this.bambooFenceBlock = this.blockRegister("bamboo_fence", new BambooFenceBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 3.0f).sounds(BlockSoundGroup.BAMBOO)));
         this.bambooFenceItem = this.itemRegister("bamboo_fence", this.bambooFenceBlock, this.defaultSettings);
+        FuelRegistry.INSTANCE.add(bambooFenceItem, 300);
+        
         this.bambooFenceGateBlock = this.blockRegister("bamboo_fence_gate", new BambooFenceGateBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 3.0f).sounds(BlockSoundGroup.BAMBOO)));
         this.bambooFenceGateItem = this.itemRegister("bamboo_fence_gate", this.bambooFenceGateBlock, this.defaultSettings);
+        FuelRegistry.INSTANCE.add(bambooFenceGateItem, 300);
+        
         //Door
         this.bambooDoorBlock = this.blockRegister("bamboo_door", new BambooDoorBlock(FabricBlockSettings.of(Material.BAMBOO).strength(3.0F, 3.0F).sounds(BlockSoundGroup.BAMBOO)));
         this.bambooDoorItem = this.itemRegister("bamboo_door", this.bambooDoorBlock, this.defaultSettings);
+        FuelRegistry.INSTANCE.add(bambooDoorItem, 200);
+        
         this.bambooTrapDoorBlock = this.blockRegister("bamboo_trapdoor", new BambooTrapDoorBlock(FabricBlockSettings.of(Material.BAMBOO).strength(3.0F, 3.0F).sounds(BlockSoundGroup.BAMBOO)));
         this.bambooTrapDoorItem = this.itemRegister("bamboo_trapdoor", this.bambooTrapDoorBlock, this.defaultSettings);
+        FuelRegistry.INSTANCE.add(bambooTrapDoorItem, 300);
     }
 
     private Block blockRegister(String id, Block block){
