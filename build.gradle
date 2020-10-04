@@ -26,6 +26,9 @@ dependencies {
 	// You may need to force-disable transitiveness on them.
 }
 
+import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+
 processResources {
 	inputs.property "version", project.version
 
@@ -37,6 +40,29 @@ processResources {
 	from(sourceSets.main.resources.srcDirs) {
 		exclude "fabric.mod.json"
 	}
+	
+	// Minifies all .json files when building the mod.
+	// The source files are not minified, only the files in the resulting .jar.
+	// This both helps in saving space, and verifies that your .json files are valid each time you build.
+	// This script is from https://github.com/TelepathicGrunt/RepurposedStructures-Fabric/blob/82d579bb3e9a48859a0b2b1d78cc1ace5417d567/build.gradle#L84
+	doLast {
+
+		def jsonMinifyStart = System.currentTimeMillis()
+		def jsonMinified = 0
+		def jsonBytesSaved = 0
+
+		fileTree(dir: outputs.files.asPath, include: '**/*.json').each {
+
+			File file = it
+			jsonMinified++
+			def oldLength = file.length()
+			file.text = JsonOutput.toJson(new JsonSlurper().parse(file))
+			jsonBytesSaved += oldLength - file.length()
+		}
+
+		println('Minified ' + jsonMinified + ' json files. Saved ' + jsonBytesSaved + ' bytes. Took ' + (System.currentTimeMillis() - jsonMinifyStart) + 'ms.')
+	}
+	
 }
 
 // ensure that the encoding is set to UTF-8, no matter what the system default is
