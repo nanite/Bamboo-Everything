@@ -3,6 +3,7 @@ plugins {
 	id 'maven-publish'
 }
 
+// This ensures that the project is built to the specified Java version
 java {
 	toolchain {
 		languageVersion = JavaLanguageVersion.of(8)
@@ -16,14 +17,11 @@ group = project.maven_group
 dependencies {
 	//to change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
-	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	mappings "net.fabricmc:yarn:${project.minecraft_version}+${project.yarn_build}:v2"
+	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}+${project.loader_build}"
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
-	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-
-	// PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
-	// You may need to force-disable transitiveness on them.
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}+${project.fabric_build}"
 }
 
 import groovy.json.JsonSlurper
@@ -34,7 +32,7 @@ processResources {
 
 	from(sourceSets.main.resources.srcDirs) {
 		include "fabric.mod.json"
-		expand "version": project.version
+		expand "version": project.version, "fabric_version": project.fabric_version, "loader_version": project.loader_version, "minecraft_version": project.minecraft_version
 	}
 
 	from(sourceSets.main.resources.srcDirs) {
@@ -43,7 +41,7 @@ processResources {
 	
 	// Minifies all .json files when building the mod.
 	// The source files are not minified, only the files in the resulting .jar.
-	// This both helps in saving space, and verifies that your .json files are valid each time you build.
+	// This both helps in reducing the size of the built .jar, and verifies that your .json files are valid each time you build.
 	// This script is from https://github.com/TelepathicGrunt/RepurposedStructures-Fabric/blob/82d579bb3e9a48859a0b2b1d78cc1ace5417d567/build.gradle#L84
 	doLast {
 
@@ -62,7 +60,6 @@ processResources {
 
 		println('Minified ' + jsonMinified + ' json files. Saved ' + jsonBytesSaved + ' bytes. Took ' + (System.currentTimeMillis() - jsonMinifyStart) + 'ms.')
 	}
-	
 }
 
 // ensure that the encoding is set to UTF-8, no matter what the system default is
