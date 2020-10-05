@@ -1,8 +1,8 @@
 package uk.gaz492.bambooeverything;
 
+import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
-import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
@@ -15,12 +15,23 @@ import net.minecraft.util.registry.Registry;
 import uk.gaz492.bambooeverything.blocks.*;
 import uk.gaz492.bambooeverything.util.ModInfo;
 
-import java.util.function.Supplier;
-
 public class BERegistry {
 
     public static Block bambooBundleBlock;
     public static Item bambooBundleItem;
+
+    public static Block bambooDoorBlock;
+    public static Item bambooDoorItem;
+    public static Block bambooTrapDoorBlock;
+    public static Item bambooTrapDoorItem;
+
+    public static Block bambooFenceBlock;
+    public static Block bambooFenceGateBlock;
+    public static Item bambooFenceGateItem;
+    public static Item bambooFenceItem;
+
+    public static Block bambooLadderBlock;
+    public static Item bambooLadderItem;
 
     public static Block bambooSlabBlock;
     public static Item bambooSlabItem;
@@ -28,35 +39,19 @@ public class BERegistry {
     public static Block bambooStairsBlock;
     public static Item bambooStairsItem;
 
-    public static Block bambooLadderBlock;
-    public static Item bambooLadderItem;
+    public static ItemGroup creativeTab = FabricItemGroupBuilder.build(new Identifier(ModInfo.ID + ":bambooeverything"),
+            () -> new ItemStack(BERegistry.bambooFenceBlock));
 
-    public static Block bambooFenceBlock;
-    public static Item bambooFenceItem;
-    public static Block bambooFenceGateBlock;
-    public static Item bambooFenceGateItem;
-
-    public static Block bambooDoorBlock;
-    public static Item bambooDoorItem;
-
-    public static Block bambooTrapDoorBlock;
-    public static Item bambooTrapDoorItem;
-
-    public static ItemGroup creativeTab = FabricItemGroupBuilder.build(new Identifier(ModInfo.ID + ":bambooeverything"), new Supplier<ItemStack>() {
-        @Override
-        public ItemStack get() {
-            return new ItemStack(bambooFenceBlock);
-        }
-    });
-
-    private final static Item.Settings defaultSettings = new Item.Settings().group(creativeTab);
+    private final static Item.Settings defaultSettings = new Item.Settings().group(BERegistry.creativeTab);
 
     public BERegistry() {
-    	
-    	/* Note: some blocks are registered as having a material of type wood. 
-    	 * Fences & ladders are registered this way in order to have them connect to other wooden blocks. 
-    	 * Doors need to be registered as wooden for villagers to pathfind through them. */
-    	    	
+
+        /*
+         * Note: some blocks are registered as having a material of type wood.
+         * Fences & ladders are registered this way in order to have them connect to other wooden blocks.
+         * Doors need to be registered as wooden for villagers to pathfind through them.
+         */
+
         //Bundle
         bambooBundleBlock = blockRegister("bamboo_bundle", new BambooBundleBlock(FabricBlockSettings.of(Material.BAMBOO).strength(1.0f, 2.0f).sounds(BlockSoundGroup.BAMBOO)));
         bambooBundleItem = itemRegister("bamboo_bundle", bambooBundleBlock, defaultSettings);
