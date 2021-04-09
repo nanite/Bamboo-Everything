@@ -4,30 +4,30 @@ loaderVersion = "[35,)"
 license = "Insert License Here"
 
 [[mods]]
-modId = "examplemod"
+modId = "bambooeverything"
 version = "${version}"
-displayName = "Example Mod"
-authors = "Me!"
+displayName = "Bamboo Everything"
+authors = "Gaz(Gaz492)"
 description = '''
-This is an example description! Tell everyone what your mod is about!
+All things bamboo
 '''
 #logoFile = ""
 
-[[dependencies.examplemod]]
+[[dependencies.bambooeverything]]
 modId = "forge"
 mandatory = true
 versionRange = "[35,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.examplemod]]
+[[dependencies.bambooeverything]]
 modId = "minecraft"
 mandatory = true
 versionRange = "[1.16.2,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.examplemod]]
+[[dependencies.bambooeverything]]
 modId = "architectury"
 mandatory = true
 versionRange = "[1.1.55,)"
