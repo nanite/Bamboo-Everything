@@ -1,20 +1,24 @@
 {
   "schemaVersion": 1,
+
+  "icon": "assets/bambooeverything/textures/block/bamboo_bundle_side.png",
   "id": "bambooeverything",
+  "license": "CC0-1.0",
   "version": "${version}",
 
   "name": "Bamboo Everything",
-  "description": "This mod adds items that can be made out of bamboo",
+  "description": "This mod adds items that can be made out of bamboo!",
+
   "authors": [
     "Gaz"
+  ],
+  "contributors": [
+    "NeRd"
   ],
   "contact": {
     "homepage": "https://github.com/gaz492/bamboo-everything",
     "sources": "https://github.com/gaz492/bamboo-everything"
   },
-
-  "license": "CC0-1.0",
-  "icon": "assets/bambooeverything/icon.png",
 
   "environment": "*",
   "entrypoints": {
@@ -22,12 +26,10 @@
       "uk.gaz492.bambooeverything.BambooEverything"
     ]
   },
-  "mixins": [
-  ],
 
   "depends": {
-    "fabricloader": ">=0.4.0",
-    "fabric": "*",
-    "ladderapi": ">=1.15.2-1.0.0"
+    "fabric": ">=${fabric_version}",
+    "fabricloader": ">=${loader_version}",
+    "minecraft": ">=${minecraft_version}"
   }
 }
