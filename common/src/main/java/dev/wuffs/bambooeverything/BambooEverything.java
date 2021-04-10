@@ -26,7 +26,6 @@ public class BambooEverything {
             new ItemStack(BambooEverythingItems.BUNDLE.get()));
 
     public BambooEverything() {
-
         new BambooEverythingEventHandler().init();
     }
 }

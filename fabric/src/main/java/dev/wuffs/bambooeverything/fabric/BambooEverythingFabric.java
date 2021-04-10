@@ -6,6 +6,6 @@ import net.fabricmc.api.ModInitializer;
 public class BambooEverythingFabric implements ModInitializer {
     @Override
     public void onInitialize() {
-        System.out.println("This is fabric");
+        BambooEverything bambooEverything = new BambooEverything();
     }
 }

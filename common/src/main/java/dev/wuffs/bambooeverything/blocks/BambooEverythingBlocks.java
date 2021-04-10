@@ -5,7 +5,6 @@ import dev.wuffs.bambooeverything.blocks.block.BambooBundleBlock;
 import me.shedaniel.architectury.registry.DeferredRegister;
 import me.shedaniel.architectury.registry.RegistrySupplier;
 import net.minecraft.core.Registry;
-import net.minecraft.world.level.block.BannerBlock;
 import net.minecraft.world.level.block.Block;
 
 public class BambooEverythingBlocks {

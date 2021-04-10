@@ -24,8 +24,6 @@ public class BambooEverythingItems {
     }
 
     public static final RegistrySupplier<Item> BUNDLE = blockItem("bundle", BambooEverythingBlocks.BUNDLE);
-//    public static final RegistrySupplier<Item> BARRIER = ITEMS.register("barrier", QuestBarrierBlockItem::new);
-//    public static final RegistrySupplier<Item> STAGE_BARRIER = ITEMS.register("stage_barrier", StageBarrierBlockItem::new);
 
     public static void register() {
         ITEMS.register();
