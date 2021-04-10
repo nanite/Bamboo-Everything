@@ -1,0 +1,18 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "BOB",
+    "BOB"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:bamboo"
+    },
+    "O": {
+      "item": "bambooeverything:bamboo_bundle"
+    }
+  },
+  "result": {
+    "item": "bambooeverything:bamboo_fence_gate"
+  }
+}

@@ -14,16 +14,18 @@ import java.util.function.Supplier;
 public class BambooEverythingItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(BambooEverything.MOD_ID, Registry.ITEM_REGISTRY);
 
-//    public static final RegistrySupplier<Item> BOOK = ITEMS.register("book", QuestBookItem::new);
-//    public static final RegistrySupplier<Item> LOOTCRATE = ITEMS.register("lootcrate", LootCrateItem::new);
-//    public static final RegistrySupplier<Item> MISSING_ITEM = ITEMS.register("missing_item", MissingItem::new);
-//    public static final RegistrySupplier<Item> CUSTOM_ICON = ITEMS.register("custom_icon", CustomIconItem::new);
-
     private static RegistrySupplier<Item> blockItem(String id, Supplier<Block> b) {
         return ITEMS.register(id, () -> new BlockItem(b.get(), new Item.Properties().tab(BambooEverything.ITEM_GROUP)));
     }
 
-    public static final RegistrySupplier<Item> BUNDLE = blockItem("bundle", BambooEverythingBlocks.BUNDLE);
+    public static final RegistrySupplier<Item> BUNDLE = blockItem("bamboo_bundle", BambooEverythingBlocks.BUNDLE);
+    public static final RegistrySupplier<Item> DOOR = blockItem("bamboo_door", BambooEverythingBlocks.DOOR);
+    public static final RegistrySupplier<Item> FENCE = blockItem("bamboo_fence", BambooEverythingBlocks.FENCE);
+    public static final RegistrySupplier<Item> FENCEGATE = blockItem("bamboo_fence_gate", BambooEverythingBlocks.FENCEGATE);
+    public static final RegistrySupplier<Item> LADDER = blockItem("bamboo_ladder", BambooEverythingBlocks.LADDER);
+    public static final RegistrySupplier<Item> SLAB = blockItem("bamboo_slab", BambooEverythingBlocks.SLAB);
+    public static final RegistrySupplier<Item> STAIRS = blockItem("bamboo_stairs", BambooEverythingBlocks.STAIRS);
+    public static final RegistrySupplier<Item> TRAPDOOR = blockItem("bamboo_trapdoor", BambooEverythingBlocks.TRAPDOOR);
 
     public static void register() {
         ITEMS.register();
