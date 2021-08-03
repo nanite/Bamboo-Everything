@@ -1,0 +1,28 @@
+modLoader = "javafml"
+loaderVersion = "[37,)"
+#issueTrackerURL = ""
+license = "ARR"
+
+[[mods]]
+modId = "bambooeverything"
+version = "${version}"
+displayName = "Bamboo Everything"
+authors = "Gaz(Gaz492)"
+description = '''
+All things bamboo
+'''
+#logoFile = ""
+
+[[dependencies.bambooeverything]]
+modId = "forge"
+mandatory = true
+versionRange = "[37,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.bambooeverything]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.17.1,)"
+ordering = "NONE"
+side = "BOTH"

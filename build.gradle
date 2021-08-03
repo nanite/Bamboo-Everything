@@ -1,58 +1,71 @@
-plugins {
-    id "architectury-plugin" version "3.0-SNAPSHOT"
-    id "forgified-fabric-loom" version "0.6-SNAPSHOT" apply false
-}
-
-architectury {
-    minecraft = rootProject.minecraft_version
-}
-
-subprojects {
-    apply plugin: "forgified-fabric-loom"
-
-    loom {
-        silentMojangMappingsLicense()
-    }
-
-    dependencies {
-        minecraft "com.mojang:minecraft:${rootProject.minecraft_version}"
-        // The following line declares the mojmap mappings, you may use other mappings as well
-        mappings loom.officialMojangMappings()
-        // The following line declares the yarn mappings you may select this one as well.
-        // mappings "net.fabricmc:yarn:1.16.5+build.4"
-    }
-}
-
-allprojects {
-    apply plugin: "java"
-    apply plugin: "architectury-plugin"
-    apply plugin: "maven-publish"
-
-    archivesBaseName = rootProject.archives_base_name
-    version = rootProject.mod_version
-    group = rootProject.maven_group
-
+buildscript {
     repositories {
-        // Add repositories to retrieve artifacts from in here.
-        // You should only use this when depending on other mods because
-        // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-        // See https://docs.gradle.org/current/userguide/declaring_repositories.html
-        // for more information about repositories.
+        maven { url = 'https://maven.minecraftforge.net' }
+        mavenCentral()
     }
+    dependencies {
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+    }
+}
+apply plugin: 'net.minecraftforge.gradle'
+// Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
+apply plugin: 'eclipse'
+apply plugin: 'maven-publish'
 
-    tasks.withType(JavaCompile) {
-        options.encoding = "UTF-8"
+version = '1.0.0'
+group = 'dev.wuffs.bambooeverything' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = 'bambooeverything'
 
-        // The Minecraft launcher currently installs Java 8 for users, so your mod probably wants to target Java 8 too
-        // JDK 9 introduced a new way of specifying this that will make sure no newer classes or methods are used.
-        // We'll use that if it's available, but otherwise we'll use the older option.
-        def targetVersion = 8
-        if (JavaVersion.current().isJava9Compatible()) {
-            options.release = targetVersion
+// Mojang ships Java 16 to end users in 1.17+ instead of Java 8 in 1.16 or lower, so your mod should target Java 16.
+java.toolchain.languageVersion = JavaLanguageVersion.of(16)
+
+println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
+minecraft {
+    mappings channel: 'official', version: '1.17.1'
+    runs {
+        client {
+            workingDirectory project.file('run')
+            mods {
+                bambooeverything {
+                    source sourceSets.main
+                }
+            }
         }
-    }
 
-    java {
-        withSourcesJar()
+        server {
+            workingDirectory project.file('run')
+            mods {
+                bambooeverything {
+                    source sourceSets.main
+                }
+            }
+        }
+
+    }
+}
+
+processResources {
+    inputs.property "version", project.version
+    filesMatching("META-INF/mods.toml") {
+        expand "version": project.version
+    }
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.17.1-37.0.19'
+}
+
+// Example for how to get properties into the manifest for reading at runtime.
+jar {
+    manifest {
+        attributes([
+                "Specification-Title"     : "examplemod",
+                "Specification-Vendor"    : "examplemodsareus",
+                "Specification-Version"   : "1", // We are version 1 of ourselves
+                "Implementation-Title"    : project.name,
+                "Implementation-Version"  : project.jar.archiveVersion,
+                "Implementation-Vendor"   : "examplemodsareus",
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        ])
     }
 }
