@@ -2,6 +2,7 @@ package dev.wuffs.bambooeverything.items;
 
 import dev.wuffs.bambooeverything.BambooEverything;
 import dev.wuffs.bambooeverything.blocks.BambooEverythingBlocks;
+import dev.wuffs.bambooeverything.entites.BambooEverythingEntities;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -26,5 +27,7 @@ public class BambooEverythingItems {
     public static final RegistryObject<Item> SLAB = blockItem("bamboo_slab", BambooEverythingBlocks.SLAB);
     public static final RegistryObject<Item> STAIRS = blockItem("bamboo_stairs", BambooEverythingBlocks.STAIRS);
     public static final RegistryObject<Item> TRAPDOOR = blockItem("bamboo_trapdoor", BambooEverythingBlocks.TRAPDOOR);
+
+    public static final RegistryObject<Item> RAFT = ITEMS.register("bamboo_raft", () -> new BambooRaftItem((new Item.Properties().stacksTo(1).tab(BambooEverything.ITEM_GROUP))));
 
 }

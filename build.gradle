@@ -8,12 +8,14 @@ buildscript {
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
-// Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
+apply from: 'https://files.saps.dev/ci/git-md-changelog.gradle'
 
-version = '1.0.0'
-group = 'dev.wuffs.bambooeverything' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+def ENV = System.getenv()
+
+version = "${mod_version}-build.${ENV.GITHUB_RUN_NUMBER ?: 9999}+mc${minecraft_version}"
+group = 'dev.wuffs'
 archivesBaseName = 'bambooeverything'
 
 // Mojang ships Java 16 to end users in 1.17+ instead of Java 8 in 1.16 or lower, so your mod should target Java 16.
@@ -21,7 +23,8 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(16)
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 minecraft {
-    mappings channel: 'official', version: '1.17.1'
+    mappings channel: 'official', version: "${minecraft_version}"
+    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
     runs {
         client {
             workingDirectory project.file('run')
@@ -52,20 +55,83 @@ processResources {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.17.1-37.0.19'
+    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+}
+
+repositories {
+    // Put repositories for dependencies here
+    // ForgeGradle automatically adds the Forge maven and Maven Central for you
+
+    // If you have mod jar dependencies in ./libs, you can declare them as a repository like so:
+    // flatDir {
+    //     dir 'libs'
+    // }
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
 jar {
     manifest {
         attributes([
-                "Specification-Title"     : "examplemod",
-                "Specification-Vendor"    : "examplemodsareus",
+                "Specification-Title"     : "Bamboo Everything",
+                "Specification-Vendor"    : "Gaz",
                 "Specification-Version"   : "1", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
-                "Implementation-Version"  : project.jar.archiveVersion,
-                "Implementation-Vendor"   : "examplemodsareus",
+                "Implementation-Version"  : "${version}",
+                "Implementation-Vendor"   : "Gaz",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
+    }
+}
+
+jar.finalizedBy('reobfJar')
+
+task sourcesJar(type: Jar) {
+    classifier = "sources"
+    from sourceSets.main.allJava
+}
+
+artifacts {
+    archives sourcesJar
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = archivesBaseName
+            artifact(jar) {
+                classifier null
+            }
+            artifact(sourcesJar) {
+                builtBy sourcesJar
+            }
+        }
+    }
+
+
+    repositories {
+        if (ENV.NANITE_DEPLOY) {
+            maven {
+                url "https://maven.nanite.dev/"
+                credentials {
+                    username = "nanite"
+                    password = "${ENV.NANITE_DEPLOY}"
+                }
+            }
+        }
+    }
+}
+
+if (ENV.CURSE_DEPLOY) {
+    curseforge {
+        apiKey = ENV.CURSE_DEPLOY
+        project {
+            id = project.curseforge_id
+            releaseType = "release"
+            addGameVersion "Forge"
+            addGameVersion "${minecraft_version}"
+            mainArtifact(jar)
+            changelog = getGitChangelog
+            changelogType = 'markdown'
+        }
     }
 }
