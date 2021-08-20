@@ -18,7 +18,6 @@ version = "${mod_version}-build.${ENV.GITHUB_RUN_NUMBER ?: 9999}+mc${minecraft_v
 group = 'dev.wuffs'
 archivesBaseName = 'bambooeverything'
 
-// Mojang ships Java 16 to end users in 1.17+ instead of Java 8 in 1.16 or lower, so your mod should target Java 16.
 java.toolchain.languageVersion = JavaLanguageVersion.of(16)
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
@@ -68,7 +67,7 @@ repositories {
     // }
 }
 
-// Example for how to get properties into the manifest for reading at runtime.
+
 jar {
     manifest {
         attributes([
