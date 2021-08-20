@@ -1,9 +1,13 @@
 package dev.wuffs.bambooeverything.entites.entity;
 
 import dev.wuffs.bambooeverything.entites.BambooEverythingEntities;
+import dev.wuffs.bambooeverything.items.BambooEverythingItems;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.vehicle.Boat;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.HitResult;
 import net.minecraftforge.fmllegacy.network.FMLPlayMessages;
 
 public class BambooRaftEntity extends Boat {
@@ -44,4 +48,13 @@ public class BambooRaftEntity extends Boat {
         }
     }
 
+    @Override
+    public Item getDropItem() {
+        return BambooEverythingItems.RAFT.get();
+    }
+
+    @Override
+    public ItemStack getPickedResult(HitResult target) {
+        return new ItemStack(BambooEverythingItems.RAFT.get());
+    }
 }
