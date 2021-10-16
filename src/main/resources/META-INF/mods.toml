@@ -5,7 +5,7 @@ license = "ARR"
 
 [[mods]]
 modId = "bambooeverything"
-version = "${version}"
+version = "${file.jarVersion}"
 displayName = "Bamboo Everything"
 authors = "Gaz(Gaz492)"
 description = '''
