@@ -3,9 +3,9 @@ package dev.wuffs.bambooeverything.blocks;
 import dev.wuffs.bambooeverything.BambooEverything;
 import dev.wuffs.bambooeverything.blocks.block.*;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 public class BambooEverythingBlocks {
 

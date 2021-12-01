@@ -8,7 +8,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.HitResult;
-import net.minecraftforge.fmllegacy.network.FMLPlayMessages;
+import net.minecraftforge.network.PlayMessages;
 
 public class BambooRaftEntity extends Boat {
     public BambooRaftEntity(EntityType<? extends BambooRaftEntity> entityType, Level level) {
@@ -24,7 +24,7 @@ public class BambooRaftEntity extends Boat {
         this.zo = z;
     }
 
-    public BambooRaftEntity(FMLPlayMessages.SpawnEntity spawnEntity, Level level) {
+    public BambooRaftEntity(PlayMessages.SpawnEntity spawnEntity, Level level) {
         this(BambooEverythingEntities.RAFT.get(), level);
     }
 
