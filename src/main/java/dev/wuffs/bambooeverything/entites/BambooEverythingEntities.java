@@ -9,7 +9,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class BambooEverythingEntities {
-    public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITIES, BambooEverything.MOD_ID);
+    public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, BambooEverything.MOD_ID);
 
     public static final RegistryObject<EntityType<BambooRaftEntity>> RAFT = ENTITIES.register("bamboo_raft", () -> EntityType.Builder.<BambooRaftEntity>of(BambooRaftEntity::new, MobCategory.MISC)
             .setCustomClientFactory(BambooRaftEntity::new)
