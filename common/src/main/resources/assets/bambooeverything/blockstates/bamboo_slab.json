@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "bambooeverything:block/bamboo_slab" },
+    "type=top": { "model": "bambooeverything:block/bamboo_slab_top" },
+    "type=double": { "model": "bambooeverything:block/bamboo_bundle" }
+  }
+}

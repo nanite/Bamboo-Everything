@@ -1,0 +1,12 @@
+accessWidener   v2  named
+accessible method net/minecraft/world/entity/vehicle/Boat isUnderwater ()Lnet/minecraft/world/entity/vehicle/Boat$Status;
+extendable method net/minecraft/world/entity/vehicle/Boat getStatus ()Lnet/minecraft/world/entity/vehicle/Boat$Status;
+accessible method net/minecraft/world/entity/vehicle/Boat checkInWater ()Z
+accessible field net/minecraft/world/item/BoatItem ENTITY_PREDICATE Ljava/util/function/Predicate;
+accessible class net/minecraft/world/entity/vehicle/Boat
+accessible field net/minecraft/world/entity/vehicle/Boat waterLevel D
+
+#public net.minecraft.world.entity.vehicle.Boat m_38394_()Lnet/minecraft/world/entity/vehicle/Boat$Status; # getUnderwaterStatus
+#public net.minecraft.world.entity.vehicle.Boat m_38392_()Lnet/minecraft/world/entity/vehicle/Boat$Status; # getBoatStatus
+#public net.minecraft.world.entity.vehicle.Boat m_38393_()Z # checkInWater
+#public net.minecraft.world.entity.vehicle.Boat * # waterLevel

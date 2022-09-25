@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "bambooeverything",
+  "version": "${version}",
+  "name": "Bamboo Everything",
+  "description": "All things bamboo",
+  "authors": [
+    "Gaz (Gaz492)"
+  ],
+  "contact": {
+    "homepage": "https://github.com/nanite/Bamboo-Everything/issues",
+    "sources": "https://github.com/nanite/Bamboo-Everything/issues"
+  },
+  "license": "All rights reserved",
+  "icon": "assets/bambooeverything/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.wuffs.fabric.BambooFabric"
+    ],
+    "client": [
+      "dev.wuffs.fabric.BambooFabricClient"
+    ]
+  },
+  "depends": {
+    "fabric": "*",
+    "minecraft": ">=1.19.2",
+    "architectury": ">=6.2.43"
+  }
+}
