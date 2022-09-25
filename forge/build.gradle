@@ -102,6 +102,7 @@ if (ENV.CURSE_DEPLOY) {
         project {
             id = project.curseforge_id
             releaseType = "release"
+            addGameVersion "Java 17"
             addGameVersion "Forge"
             addGameVersion "${minecraft_version}"
             mainArtifact(remapJar)
