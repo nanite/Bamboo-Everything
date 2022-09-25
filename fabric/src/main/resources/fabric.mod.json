@@ -16,10 +16,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "dev.wuffs.fabric.BambooFabric"
+      "dev.wuffs.BambooEverything::init"
     ],
     "client": [
-      "dev.wuffs.fabric.BambooFabricClient"
+      "dev.wuffs.BambooEverythingClient::init"
     ]
   },
   "depends": {
