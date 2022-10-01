@@ -1,0 +1,18 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "B B",
+    "BBB",
+    "B B"
+  ],
+  "key": {
+    "B": {
+      "item": "bambooeverything:dry_bamboo",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "bambooeverything:dry_bamboo_ladder",
+    "count": 3
+  }
+}

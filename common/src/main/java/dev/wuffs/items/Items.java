@@ -43,6 +43,8 @@ public class Items {
     public static final RegistrySupplier<Item> TRAPDOOR = blockItem("bamboo_trapdoor", Blocks.TRAPDOOR);
     public static final RegistrySupplier<Item> DRY_TRAPDOOR = blockItem("dry_bamboo_trapdoor", Blocks.DRY_TRAPDOOR);
 
+    public static final RegistrySupplier<Item> DRY_BAMBOO = ITEMS.register("dry_bamboo", () -> new Item(new Item.Properties().tab(BambooEverything.CREATIVE_TAB)));
+
     public static final RegistrySupplier<Item> RAFT = ITEMS.register("bamboo_raft", () -> new BambooRaftItem((new Item.Properties().stacksTo(1).tab(BambooEverything.CREATIVE_TAB))));
 
 }

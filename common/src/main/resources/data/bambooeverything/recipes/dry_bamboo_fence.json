@@ -1,0 +1,19 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "OBO",
+    "OBO"
+  ],
+  "key": {
+    "B": {
+      "item": "bambooeverything:dry_bamboo"
+    },
+    "O": {
+      "item": "bambooeverything:dry_bamboo_bundle"
+    }
+  },
+  "result": {
+    "item": "bambooeverything:dry_bamboo_fence",
+    "count": 3
+  }
+}
