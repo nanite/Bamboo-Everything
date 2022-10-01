@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "bambooeverything:bamboo_fence",
-    "bambooeverything:bamboo_bundle"
+    "bambooeverything:bamboo_bundle",
+    "bambooeverything:dry_bamboo_bundle",
+    "bambooeverything:dry_bamboo_fence"
   ]
 }

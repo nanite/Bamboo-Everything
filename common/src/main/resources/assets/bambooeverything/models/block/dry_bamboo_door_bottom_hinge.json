@@ -1,0 +1,22 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"textures": {
+		"0": "bambooeverything:block/dry_bamboo_door_bottom",
+		"1": "bambooeverything:block/dry_bamboo_door_ends",
+		"particle": "bambooeverything:block/dry_bamboo_door_bottom"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [3, 16, 16],
+			"faces": {
+				"north": {"uv": [13, 0, 9, 16], "texture": "#0", "cullface": "north"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"south": {"uv": [3, 0, 7, 16], "texture": "#0", "cullface": "south"},
+				"west": {"uv": [16, 0, 0, 16], "texture": "#0", "cullface": "west"},
+				"down": {"uv": [0, 0, 16, 3], "rotation": 90, "texture": "#1", "cullface": "down"}
+			}
+		}
+	]
+}
