@@ -8,7 +8,9 @@
   "block.bambooeverything.bamboo_bundle": "Bamboo Bundle",
   "block.bambooeverything.bamboo_stairs": "Bamboo Stairs",
   "block.bambooeverything.bamboo_slab": "Bamboo Slab",
+  "block.bambooeverything.bamboo_torch": "Bamboo Torch",
   "item.bambooeverything.bamboo_raft": "Bamboo Raft",
+
   "item.bambooeverything.dry_bamboo": "Dry Bamboo",
   "block.bambooeverything.dry_bamboo_ladder": "Dry Bamboo Ladder",
   "block.bambooeverything.dry_bamboo_fence": "Dry Bamboo Fence",
@@ -18,5 +20,6 @@
   "block.bambooeverything.dry_bamboo_bundle": "Dry Bamboo Bundle",
   "block.bambooeverything.dry_bamboo_stairs": "Dry Bamboo Stairs",
   "block.bambooeverything.dry_bamboo_slab": "Dry Bamboo Slab",
+  "block.bambooeverything.dry_bamboo_torch": "Dry Bamboo Torch",
   "item.bambooeverything.dry_bamboo_raft": "Dry Bamboo Raft"
 }

@@ -105,6 +105,9 @@ if (ENV.CURSE_DEPLOY) {
             addGameVersion "Java 17"
             addGameVersion "Forge"
             addGameVersion "${minecraft_version}"
+            relations {
+                requiredDependency 'architectury-api'
+            }
             mainArtifact(remapJar)
             changelog = getGitChangelog
             changelogType = 'markdown'

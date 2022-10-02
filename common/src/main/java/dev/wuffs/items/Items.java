@@ -8,6 +8,7 @@ import dev.wuffs.items.item.BambooRaftItem;
 import net.minecraft.core.Registry;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.StandingAndWallBlockItem;
 import net.minecraft.world.level.block.Block;
 
 import java.util.function.Supplier;
@@ -43,8 +44,13 @@ public class Items {
     public static final RegistrySupplier<Item> TRAPDOOR = blockItem("bamboo_trapdoor", Blocks.TRAPDOOR);
     public static final RegistrySupplier<Item> DRY_TRAPDOOR = blockItem("dry_bamboo_trapdoor", Blocks.DRY_TRAPDOOR);
 
+    public static final RegistrySupplier<Item> TORCH = ITEMS.register("bamboo_torch", () -> new StandingAndWallBlockItem(Blocks.TORCH.get(), Blocks.WALL_TORCH.get(), (new Item.Properties()).tab(BambooEverything.CREATIVE_TAB)));
+    public static final RegistrySupplier<Item> DRY_TORCH = ITEMS.register("dry_bamboo_torch", () -> new StandingAndWallBlockItem(Blocks.DRY_TORCH.get(), Blocks.DRY_WALL_TORCH.get(), (new Item.Properties()).tab(BambooEverything.CREATIVE_TAB)));
+
     public static final RegistrySupplier<Item> DRY_BAMBOO = ITEMS.register("dry_bamboo", () -> new Item(new Item.Properties().tab(BambooEverything.CREATIVE_TAB)));
 
-    public static final RegistrySupplier<Item> RAFT = ITEMS.register("bamboo_raft", () -> new BambooRaftItem((new Item.Properties().stacksTo(1).tab(BambooEverything.CREATIVE_TAB))));
+    public static final RegistrySupplier<Item> RAFT = ITEMS.register("bamboo_raft", () -> new BambooRaftItem((
+            new Item.Properties().stacksTo(1).tab(BambooEverything.CREATIVE_TAB)
+    )));
 
 }

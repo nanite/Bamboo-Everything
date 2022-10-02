@@ -1,0 +1,27 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "C",
+    "B"
+  ],
+  "key": {
+    "B": {
+      "item": "bambooeverything:dry_bamboo",
+      "data": 0
+    },
+    "C": [
+      {
+        "item": "minecraft:coal",
+        "data": 0
+      },
+      {
+        "item": "minecraft:charcoal",
+        "data": 0
+      }
+    ]
+  },
+  "result": {
+    "item": "bambooeverything:dry_bamboo_torch",
+    "count": 1
+  }
+}

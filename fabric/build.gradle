@@ -99,6 +99,10 @@ if (ENV.CURSE_DEPLOY) {
             addGameVersion "Fabric"
             addGameVersion "Java 17"
             addGameVersion "${minecraft_version}"
+            relations {
+                requiredDependency 'fabric-api'
+                requiredDependency 'architectury-api'
+            }
             mainArtifact(remapJar.archivePath)
             changelog = getGitChangelog
             changelogType = 'markdown'

@@ -5,7 +5,13 @@ import dev.architectury.registry.registries.RegistrySupplier;
 import dev.wuffs.BambooEverything;
 import dev.wuffs.blocks.block.*;
 import net.minecraft.core.Registry;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.TorchBlock;
+import net.minecraft.world.level.block.WallTorchBlock;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.Material;
 
 public class Blocks {
 
@@ -27,5 +33,41 @@ public class Blocks {
     public static final RegistrySupplier<Block> DRY_STAIRS = BLOCKS.register("dry_bamboo_stairs", BambooStairsBlock::new);
     public static final RegistrySupplier<Block> TRAPDOOR = BLOCKS.register("bamboo_trapdoor", BambooTrapDoorBlock::new);
     public static final RegistrySupplier<Block> DRY_TRAPDOOR = BLOCKS.register("dry_bamboo_trapdoor", BambooTrapDoorBlock::new);
+
+    public static final RegistrySupplier<Block> TORCH = BLOCKS.register("bamboo_torch", () -> new TorchBlock(
+            BlockBehaviour.Properties.of(Material.DECORATION)
+                    .noCollission()
+                    .instabreak()
+                    .lightLevel((x) -> 14)
+                    .sound(SoundType.BAMBOO)
+                    .noOcclusion()
+            , ParticleTypes.FLAME));
+    public static final RegistrySupplier<Block> WALL_TORCH = BLOCKS.register("bamboo_wall_torch", () -> new WallTorchBlock(
+            BlockBehaviour.Properties.of(Material.DECORATION)
+                    .noCollission()
+                    .instabreak()
+                    .lightLevel((x) -> 14)
+                    .sound(SoundType.BAMBOO)
+                    .dropsLike(TORCH.get())
+                    .noOcclusion()
+            , ParticleTypes.FLAME));
+
+    public static final RegistrySupplier<Block> DRY_TORCH = BLOCKS.register("dry_bamboo_torch", () -> new TorchBlock(
+            BlockBehaviour.Properties.of(Material.DECORATION)
+                    .noCollission()
+                    .instabreak()
+                    .lightLevel((x) -> 14)
+                    .sound(SoundType.BAMBOO)
+                    .noOcclusion()
+            , ParticleTypes.FLAME));
+    public static final RegistrySupplier<Block> DRY_WALL_TORCH = BLOCKS.register("dry_bamboo_wall_torch", () -> new WallTorchBlock(
+            BlockBehaviour.Properties.of(Material.DECORATION)
+                    .noCollission()
+                    .instabreak()
+                    .lightLevel((x) -> 14)
+                    .sound(SoundType.BAMBOO)
+                    .dropsLike(DRY_TORCH.get())
+                    .noOcclusion()
+            , ParticleTypes.FLAME));
 
 }
