@@ -10,17 +10,17 @@
   "block.bambooeverything.bamboo_stairs":     "Bambustreppe",
   "block.bambooeverything.bamboo_slab":       "Bambusstufe",
   "block.bambooeverything.bamboo_torch":      "Bambusfackel",
-  "item.bambooeverything.bamboo_raft":        "Bambusfloß"
+  "item.bambooeverything.bamboo_raft":        "Bambusfloß",
 
   "item.bambooeverything.dry_bamboo":             "Getrockneter Bambus",
   "block.bambooeverything.dry_bamboo_ladder":     "Leiter aus getrocknetem Bambus",
   "block.bambooeverything.dry_bamboo_fence":      "Zaun aus getrocknetem Bambus",
   "block.bambooeverything.dry_bamboo_fence_gate": "Zauntor aus getrocknetem Bambus",
-  "block.bambooeverything.dry_bamboo_door":       "Tür aus getrocknetem Bamburs",
-  "block.bambooeverything.dry_bamboo_trapdoor":   "Falltür aus getrocknetem Bamburs",
+  "block.bambooeverything.dry_bamboo_door":       "Tür aus getrocknetem Bambus",
+  "block.bambooeverything.dry_bamboo_trapdoor":   "Falltür aus getrocknetem Bambus",
   "block.bambooeverything.dry_bamboo_bundle":     "Büdel mit getrocknetem Bambus",
   "block.bambooeverything.dry_bamboo_stairs":     "Treppe getrocknetem Bambus",
   "block.bambooeverything.dry_bamboo_slab":       "Stufe getrocknetem Bambus",
-  "block.bambooeverything.dry_bamboo_torch":      "Fackel getrocknetem Bambuhs",
+  "block.bambooeverything.dry_bamboo_torch":      "Fackel getrocknetem Bambus",
   "item.bambooeverything.dry_bamboo_raft":        "Floß getrocknetem Bambus"
 }
