@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "bambooeverything:dry_bamboo_ladder"
+    ]
+  },
+  "criteria": {
+    "has_dry_bamboo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "bambooeverything:dry_bamboo"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "bambooeverything:dry_bamboo_ladder"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_dry_bamboo",
+      "has_the_recipe"
+    ]
+  ]
+}
