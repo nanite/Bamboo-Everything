@@ -18,6 +18,9 @@ public class BambooEverythingClient {
     public static void init(){
         EntityRendererRegistry.register(Entities.RAFT, BambooRaftRender::new);
         EntityModelLayerRegistry.register(RAFT, BambooRaftModel::createRaftDefenition);
+    }
+
+    public static void setRenderType(){
         RenderTypeRegistry.register(RenderType.cutout(), Blocks.TORCH.get());
         RenderTypeRegistry.register(RenderType.cutout(), Blocks.WALL_TORCH.get());
         RenderTypeRegistry.register(RenderType.cutout(), Blocks.DRY_TORCH.get());
