@@ -1,6 +1,7 @@
 package dev.wuffs;
 
 import dev.architectury.registry.CreativeTabRegistry;
+import dev.architectury.registry.fuel.FuelRegistry;
 import dev.wuffs.blocks.Blocks;
 import dev.wuffs.entites.Entities;
 import dev.wuffs.items.Items;
@@ -17,5 +18,11 @@ public class BambooEverything {
         Blocks.BLOCKS.register();
         Items.ITEMS.register();
         Entities.ENTITIES.register();
+    }
+
+    public static void fuelRegister(){
+        FuelRegistry.register(350, Items.BUNDLE.get());
+        FuelRegistry.register(350, Items.DRY_BUNDLE.get());
+        FuelRegistry.register(50, Items.DRY_BAMBOO.get());
     }
 }

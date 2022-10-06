@@ -9,6 +9,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod(BambooEverything.MOD_ID)
@@ -16,12 +17,17 @@ public class BambooEverythingForge {
     public BambooEverythingForge() {
         EventBuses.registerModEventBus(BambooEverything.MOD_ID, FMLJavaModLoadingContext.get().getModEventBus());
         BambooEverything.init();
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setupClient);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::commonSetup);
         EnvExecutor.runInEnv(Env.CLIENT, ()-> BambooEverythingClient::init);
     }
 
     @OnlyIn(Dist.CLIENT)
-    public void setupClient(final FMLClientSetupEvent event) {
+    public void clientSetup(final FMLClientSetupEvent event) {
         BambooEverythingClient.setRenderType();
+    }
+
+    public void commonSetup(final FMLCommonSetupEvent event){
+        BambooEverything.fuelRegister();
     }
 }
