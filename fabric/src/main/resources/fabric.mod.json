@@ -16,7 +16,8 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "dev.wuffs.BambooEverything::init"
+      "dev.wuffs.BambooEverything::init",
+      "dev.wuffs.BambooEverything::fuelRegister"
     ],
     "client": [
       "dev.wuffs.BambooEverythingClient::init",
