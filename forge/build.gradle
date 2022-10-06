@@ -109,7 +109,7 @@ if (ENV.CURSE_DEPLOY) {
                 requiredDependency 'architectury-api'
             }
             mainArtifact(remapJar)
-            changelog = getGitChangelog
+            changelog = file("../CHANGELOG.md")
             changelogType = 'markdown'
         }
     }
