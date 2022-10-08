@@ -5,8 +5,6 @@ import dev.architectury.utils.Env;
 import dev.architectury.utils.EnvExecutor;
 import dev.wuffs.BambooEverything;
 import dev.wuffs.BambooEverythingClient;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -22,7 +20,6 @@ public class BambooEverythingForge {
         EnvExecutor.runInEnv(Env.CLIENT, ()-> BambooEverythingClient::init);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public void clientSetup(final FMLClientSetupEvent event) {
         BambooEverythingClient.setRenderType();
     }
