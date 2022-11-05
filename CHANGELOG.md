@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.3.4]
+
+- Bumped forge version
+- Fix: Dry raft error message
+
 ## [1.3.3]
 
 ### Fixed
