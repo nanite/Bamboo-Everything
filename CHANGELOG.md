@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.3.5]
+
+- Bumped forge version
+
 ## [1.3.4]
 
 - Bumped forge version
