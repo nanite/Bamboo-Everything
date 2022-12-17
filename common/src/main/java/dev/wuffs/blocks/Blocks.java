@@ -4,8 +4,8 @@ import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import dev.wuffs.BambooEverything;
 import dev.wuffs.blocks.block.*;
-import net.minecraft.core.Registry;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.TorchBlock;
@@ -15,7 +15,7 @@ import net.minecraft.world.level.material.Material;
 
 public class Blocks {
 
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(BambooEverything.MOD_ID, Registry.BLOCK_REGISTRY);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(BambooEverything.MOD_ID, Registries.BLOCK);
 
     public static final RegistrySupplier<Block> BUNDLE = BLOCKS.register("bamboo_bundle", BambooBundleBlock::new);
     public static final RegistrySupplier<Block> DRY_BUNDLE = BLOCKS.register("dry_bamboo_bundle", BambooBundleBlock::new);
@@ -34,6 +34,11 @@ public class Blocks {
     public static final RegistrySupplier<Block> TRAPDOOR = BLOCKS.register("bamboo_trapdoor", BambooTrapDoorBlock::new);
     public static final RegistrySupplier<Block> DRY_TRAPDOOR = BLOCKS.register("dry_bamboo_trapdoor", BambooTrapDoorBlock::new);
 
+//    public static final RegistrySupplier<Block> BED = BLOCKS.register("bamboo_bed", () -> new BedBlock())
+//    public static final RegistrySupplier<Block> DRY_BED = BLOCKS.register("dry_bamboo_bed", () -> new BedBlock())
+
+//    public static final RegistrySupplier<Block> TIKI_TORCH = BLOCKS.register("tiki_torch", BambooTikiTorch::new);
+//    public static final RegistrySupplier<Block> DRY_TIKI_TORCH = BLOCKS.register("dry_tiki_torch", BambooTikiTorch::new);
     public static final RegistrySupplier<Block> TORCH = BLOCKS.register("bamboo_torch", () -> new TorchBlock(
             BlockBehaviour.Properties.of(Material.DECORATION)
                     .noCollission()
