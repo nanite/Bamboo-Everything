@@ -109,3 +109,5 @@ if (ENV.CURSE_DEPLOY) {
         }
     }
 }
+
+rootProject.tasks.getByName("curseforgePublish").dependsOn tasks.getByName("curseforge")
