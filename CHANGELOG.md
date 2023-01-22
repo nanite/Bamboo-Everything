@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.3.1]
+
+- Update build script
+
 ## [2.3.0]
 
 - Updated to 1.19.3, removed raft as a bamboo boat is better, has nothing to do with item rendering issues
