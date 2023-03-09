@@ -1,0 +1,25 @@
+{
+  "itemGroup.bambooeverything.bambooeverything": "Bamboo Everything",
+  "block.bambooeverything.bamboo_ladder": "Бамбуковая лестница",
+  "block.bambooeverything.bamboo_fence": "Бамбуковый забор",
+  "block.bambooeverything.bamboo_fence_gate": "Бамбуковая калитка",
+  "block.bambooeverything.bamboo_door": "Бамбуковая дверь",
+  "block.bambooeverything.bamboo_trapdoor": "Бамбуковый люк",
+  "block.bambooeverything.bamboo_bundle": "Связка бамбука",
+  "block.bambooeverything.bamboo_stairs": "Бамбуковые ступеньки",
+  "block.bambooeverything.bamboo_slab": "Бамбуковая плита",
+  "block.bambooeverything.bamboo_torch": "Бамбуковый факел",
+  "item.bambooeverything.bamboo_raft": "Бамбуковый плот",
+
+  "item.bambooeverything.dry_bamboo": "Высушенный бамбук",
+  "block.bambooeverything.dry_bamboo_ladder": "Лестница из высушенного бамбука",
+  "block.bambooeverything.dry_bamboo_fence": "Забор из высушенного бамбука",
+  "block.bambooeverything.dry_bamboo_fence_gate": "Калитка из высушенного бамбука",
+  "block.bambooeverything.dry_bamboo_door": "Дверь из высушенного бамбука",
+  "block.bambooeverything.dry_bamboo_trapdoor": "Люк из высушенного бамбука",
+  "block.bambooeverything.dry_bamboo_bundle": "Связка высушенного бамбука",
+  "block.bambooeverything.dry_bamboo_stairs": "Ступеньки из высушенного бамбука",
+  "block.bambooeverything.dry_bamboo_slab": "Плита из высушенного бамбука",
+  "block.bambooeverything.dry_bamboo_torch": "Факел из высушенного бамбука",
+  "item.bambooeverything.dry_bamboo_raft": "Плот из высушенного бамбука"
+}
