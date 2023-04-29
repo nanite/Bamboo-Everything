@@ -90,7 +90,7 @@ publishing {
     }
 }
 
-if (ENV.CURSE_TOEKEN) {
+if (ENV.CURSE_TOKEN) {
     curseforge {
         apiKey = ENV.CURSE_TOKEN
         project {
