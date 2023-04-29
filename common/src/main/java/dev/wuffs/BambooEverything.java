@@ -9,13 +9,9 @@ import net.minecraft.world.item.ItemStack;
 
 public class BambooEverything {
     public static final String MOD_ID = "bambooeverything";
-//    public static final CreativeModeTab CREATIVE_TAB = CreativeTabRegistry.create(new ResourceLocation(MOD_ID, MOD_ID), () ->
-//            new ItemStack(Blocks.BUNDLE.get()));
-
     public static void init() {
         Blocks.BLOCKS.register();
         Items.ITEMS.register();
-//        Entities.ENTITIES.register();
     }
 
     public static void fuelRegister(){

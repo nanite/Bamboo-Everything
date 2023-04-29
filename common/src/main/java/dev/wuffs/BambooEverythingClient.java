@@ -11,8 +11,6 @@ public class BambooEverythingClient {
 
     public static final ModelLayerLocation RAFT = new ModelLayerLocation(new ResourceLocation(BambooEverything.MOD_ID, "bamboo_raft"), "bamboo_raft");
     public static void init(){
-//        EntityRendererRegistry.register(Entities.RAFT, BambooRaftRender::new);
-//        EntityModelLayerRegistry.register(RAFT, BambooRaftModel::createRaftDefenition);
     }
 
     public static void setRenderType(){

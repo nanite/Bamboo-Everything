@@ -48,8 +48,4 @@ public class Items {
     public static final RegistrySupplier<Item> DRY_TORCH = ITEMS.register("dry_bamboo_torch", () -> new StandingAndWallBlockItem(Blocks.DRY_TORCH.get(), Blocks.DRY_WALL_TORCH.get(), (new Item.Properties()).arch$tab(BambooEverything.CREATIVE_TAB), Direction.DOWN));
 
     public static final RegistrySupplier<Item> DRY_BAMBOO = ITEMS.register("dry_bamboo", () -> new Item(new Item.Properties().arch$tab(BambooEverything.CREATIVE_TAB)));
-
-//    public static final RegistrySupplier<Item> RAFT = ITEMS.register("bamboo_raft", () -> new BambooRaftItem((
-//            new Item.Properties().stacksTo(1).arch$tab(BambooEverything.CREATIVE_TAB)
-//    )));
 }
