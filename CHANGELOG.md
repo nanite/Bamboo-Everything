@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.4.1]
+
+- Update architectury loom
+
+## [2.4.0]
+
+- Update to 1.19.4
+
 ## [2.3.3]
 
 - Update build script
