@@ -103,7 +103,7 @@ if (ENV.CURSE_TOEKEN) {
                 requiredDependency 'fabric-api'
                 requiredDependency 'architectury-api'
             }
-            mainArtifact(remapJar.archivePath)
+            mainArtifact(remapJar)
             changelog = file("../CHANGELOG.md")
             changelogType = 'markdown'
         }
