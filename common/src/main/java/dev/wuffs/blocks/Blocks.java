@@ -11,7 +11,6 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.TorchBlock;
 import net.minecraft.world.level.block.WallTorchBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
 
 public class Blocks {
 
@@ -40,7 +39,7 @@ public class Blocks {
 //    public static final RegistrySupplier<Block> TIKI_TORCH = BLOCKS.register("tiki_torch", BambooTikiTorch::new);
 //    public static final RegistrySupplier<Block> DRY_TIKI_TORCH = BLOCKS.register("dry_tiki_torch", BambooTikiTorch::new);
     public static final RegistrySupplier<Block> TORCH = BLOCKS.register("bamboo_torch", () -> new TorchBlock(
-            BlockBehaviour.Properties.of(Material.DECORATION)
+            BlockBehaviour.Properties.of()
                     .noCollission()
                     .instabreak()
                     .lightLevel((x) -> 14)
@@ -48,7 +47,7 @@ public class Blocks {
                     .noOcclusion()
             , ParticleTypes.FLAME));
     public static final RegistrySupplier<Block> WALL_TORCH = BLOCKS.register("bamboo_wall_torch", () -> new WallTorchBlock(
-            BlockBehaviour.Properties.of(Material.DECORATION)
+            BlockBehaviour.Properties.of()
                     .noCollission()
                     .instabreak()
                     .lightLevel((x) -> 14)
@@ -58,7 +57,7 @@ public class Blocks {
             , ParticleTypes.FLAME));
 
     public static final RegistrySupplier<Block> DRY_TORCH = BLOCKS.register("dry_bamboo_torch", () -> new TorchBlock(
-            BlockBehaviour.Properties.of(Material.DECORATION)
+            BlockBehaviour.Properties.of()
                     .noCollission()
                     .instabreak()
                     .lightLevel((x) -> 14)
@@ -66,7 +65,7 @@ public class Blocks {
                     .noOcclusion()
             , ParticleTypes.FLAME));
     public static final RegistrySupplier<Block> DRY_WALL_TORCH = BLOCKS.register("dry_bamboo_wall_torch", () -> new WallTorchBlock(
-            BlockBehaviour.Properties.of(Material.DECORATION)
+            BlockBehaviour.Properties.of()
                     .noCollission()
                     .instabreak()
                     .lightLevel((x) -> 14)

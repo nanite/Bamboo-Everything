@@ -3,13 +3,12 @@ package dev.wuffs.blocks.block;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
-import net.minecraft.world.level.material.Material;
 
 public class BambooDoorBlock extends DoorBlock
 {
 
     public BambooDoorBlock() {
-        super(Properties.of(Material.BAMBOO)
+        super(Properties.of()
                 .strength(3.0f, 3.0f)
                 .sound(SoundType.BAMBOO), BlockSetType.BAMBOO
         );

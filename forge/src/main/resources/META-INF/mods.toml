@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "[45,)"
+loaderVersion = "[46,)"
 #issueTrackerURL = ""
 license = "All rights reserved"
 
@@ -16,20 +16,20 @@ All things bamboo
 [[dependencies.bambooeverything]]
 modId = "forge"
 mandatory = true
-versionRange = "[43,)"
+versionRange = "[46,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.bambooeverything]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.19.4,)"
+versionRange = "[1.20,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.bambooeverything]]
 modId = "architectury"
 mandatory = true
-versionRange = "[8.1.79,)"
+versionRange = "[9.0.7,)"
 ordering = "AFTER"
 side = "BOTH"
