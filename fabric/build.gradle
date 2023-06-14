@@ -9,6 +9,22 @@ architectury {
 
 loom {
     accessWidenerPath = project(":common").loom.accessWidenerPath
+
+    runs{
+        data {
+            inherit client
+            setConfigName("Fabric Data")
+            ideConfigGenerated(true)
+
+            vmArg("-Dfabric-api.datagen")
+            vmArg("-Dfabric-api.datagen.output-dir=${project(":common").file("src/generated/resources")}")
+            vmArg("-Dfabric-api.datagen.modid=bambooeverything")
+
+            runDir "build/datagen"
+
+        }
+    }
+
 }
 
 configurations {

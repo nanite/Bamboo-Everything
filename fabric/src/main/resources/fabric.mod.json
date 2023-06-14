@@ -22,6 +22,9 @@
     "client": [
       "dev.wuffs.BambooEverythingClient::init",
       "dev.wuffs.BambooEverythingClient::setRenderType"
+    ],
+    "fabric-datagen": [
+      "dev.wuffs.fabric.DataGens"
     ]
   },
   "depends": {

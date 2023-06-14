@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "B": {
+      "item": "bambooeverything:dry_bamboo"
+    },
+    "C": [
+      {
+        "item": "minecraft:coal"
+      },
+      {
+        "item": "minecraft:charcoal"
+      }
+    ]
+  },
+  "pattern": [
+    "C",
+    "B"
+  ],
+  "result": {
+    "item": "bambooeverything:dry_bamboo_torch"
+  },
+  "show_notification": true
+}
