@@ -95,24 +95,3 @@ publishing {
         }
     }
 }
-
-if (ENV.CURSE_TOKEN) {
-    curseforge {
-        apiKey = ENV.CURSE_TOKEN
-        project {
-            id = project.curseforge_id
-            releaseType = "release"
-            addGameVersion "Java 17"
-            addGameVersion "Forge"
-            addGameVersion "${minecraft_version}"
-            relations {
-                requiredDependency 'architectury-api'
-            }
-            mainArtifact(remapJar)
-            changelog = file("../CHANGELOG.md")
-            changelogType = 'markdown'
-        }
-    }
-}
-
-rootProject.tasks.getByName("curseforgePublish").dependsOn tasks.getByName("curseforge")

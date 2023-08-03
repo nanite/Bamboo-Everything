@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.0.2]
+
+- Updated forge and fabric
+- Updated build script
+
 ## [3.0.1]
 
 - Updated to 1.20.1
