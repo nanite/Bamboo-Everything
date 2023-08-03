@@ -82,10 +82,16 @@ publishMods {
         requires {
             slug = "fabric-api"
         }
+        requires {
+            slug = "architectury-api"
+        }
     }
 
     curseforge("curseforgeForge") {
         from(curseForgeOptions, forgeOptions)
+        requires {
+            slug = "architectury-api"
+        }
     }
 
 
@@ -94,10 +100,16 @@ publishMods {
         requires {
             slug = "fabric-api"
         }
+        requires {
+            slug = "architectury-api"
+        }
     }
 
     modrinth("modrinthForge") {
         from(modrinthOptions, forgeOptions)
+        requires {
+            slug = "architectury-api"
+        }
     }
 
     github {
