@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.0.0]
+
+- Ported to 1.20.4
+
 ## [3.0.2]
 
 - Updated forge and fabric

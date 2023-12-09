@@ -17,7 +17,7 @@ public class RecipeGenerator extends FabricRecipeProvider {
     }
 
     @Override
-    public void buildRecipes(Consumer<FinishedRecipe> exporter) {
+    public void buildRecipes(RecipeOutput exporter) {
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(Items.BAMBOO), RecipeCategory.MISC, dev.wuffs.items.Items.DRY_BAMBOO.get(), 0.5f, 50)
                 .unlockedBy("has_bamboo", has(Items.BAMBOO))

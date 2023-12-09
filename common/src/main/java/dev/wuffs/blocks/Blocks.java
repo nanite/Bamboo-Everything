@@ -36,17 +36,19 @@ public class Blocks {
 //    public static final RegistrySupplier<Block> BED = BLOCKS.register("bamboo_bed", () -> new BedBlock())
 //    public static final RegistrySupplier<Block> DRY_BED = BLOCKS.register("dry_bamboo_bed", () -> new BedBlock())
 
-//    public static final RegistrySupplier<Block> TIKI_TORCH = BLOCKS.register("tiki_torch", BambooTikiTorch::new);
+    //    public static final RegistrySupplier<Block> TIKI_TORCH = BLOCKS.register("tiki_torch", BambooTikiTorch::new);
 //    public static final RegistrySupplier<Block> DRY_TIKI_TORCH = BLOCKS.register("dry_tiki_torch", BambooTikiTorch::new);
     public static final RegistrySupplier<Block> TORCH = BLOCKS.register("bamboo_torch", () -> new TorchBlock(
+            ParticleTypes.FLAME,
             BlockBehaviour.Properties.of()
                     .noCollission()
                     .instabreak()
                     .lightLevel((x) -> 14)
                     .sound(SoundType.BAMBOO)
                     .noOcclusion()
-            , ParticleTypes.FLAME));
+    ));
     public static final RegistrySupplier<Block> WALL_TORCH = BLOCKS.register("bamboo_wall_torch", () -> new WallTorchBlock(
+            ParticleTypes.FLAME,
             BlockBehaviour.Properties.of()
                     .noCollission()
                     .instabreak()
@@ -54,17 +56,19 @@ public class Blocks {
                     .sound(SoundType.BAMBOO)
                     .dropsLike(TORCH.get())
                     .noOcclusion()
-            , ParticleTypes.FLAME));
+    ));
 
     public static final RegistrySupplier<Block> DRY_TORCH = BLOCKS.register("dry_bamboo_torch", () -> new TorchBlock(
+            ParticleTypes.FLAME,
             BlockBehaviour.Properties.of()
                     .noCollission()
                     .instabreak()
                     .lightLevel((x) -> 14)
                     .sound(SoundType.BAMBOO)
                     .noOcclusion()
-            , ParticleTypes.FLAME));
+    ));
     public static final RegistrySupplier<Block> DRY_WALL_TORCH = BLOCKS.register("dry_bamboo_wall_torch", () -> new WallTorchBlock(
+            ParticleTypes.FLAME,
             BlockBehaviour.Properties.of()
                     .noCollission()
                     .instabreak()
@@ -72,6 +76,6 @@ public class Blocks {
                     .sound(SoundType.BAMBOO)
                     .dropsLike(DRY_TORCH.get())
                     .noOcclusion()
-            , ParticleTypes.FLAME));
+    ));
 
 }

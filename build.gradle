@@ -1,8 +1,7 @@
 plugins {
     id "architectury-plugin" version "3.4-SNAPSHOT"
-    id "dev.architectury.loom" version "1.2-SNAPSHOT" apply false
-    id "com.matthewprenger.cursegradle" version "1.4.0" apply false
-    id "me.modmuss50.mod-publish-plugin" version "0.3.0"
+    id "dev.architectury.loom" version "1.4-SNAPSHOT" apply false
+    id "me.modmuss50.mod-publish-plugin" version "0.4.5"
 }
 
 ext.isSnapshot = providers.environmentVariable("SNAPSHOT").map { it == "true" }.getOrElse(false)
@@ -28,13 +27,14 @@ allprojects {
     apply plugin: "java"
     apply plugin: "architectury-plugin"
     apply plugin: "maven-publish"
-    apply plugin: 'com.matthewprenger.cursegradle'
 
     archivesBaseName = rootProject.archives_base_name
     version = "${mod_version}+mc${minecraft_version}${isSnapshot ? '-SNAPSHOT' : ''}"
     group = rootProject.maven_group
 
     repositories {
+//        maven { url "https://maven.wuffs.wtf/releases"}
+        maven { url "https://maven.neomc.dev/releases"}
     }
 
     tasks.withType(JavaCompile) {
@@ -60,9 +60,15 @@ publishMods {
     }
 
     def forgeOptions = publishOptions {
-        file = project.provider { project(":forge").tasks.remapJar }.flatMap { it.archiveFile }
+        file = project.provider { project(":forge").tasks.jar }.flatMap { it.archiveFile }
         displayName = "${project.name} Forge ${mod_version}+mc${minecraft_version}"
         modLoaders.add("forge")
+    }
+
+    def neoOptions = publishOptions {
+        file = project.provider { project(":neoforge").tasks.jar }.flatMap { it.archiveFile }
+        displayName = "${project.name} NeoForged ${mod_version}+mc${minecraft_version}"
+        modLoaders.add("neoforge")
     }
 
     def curseForgeOptions = curseforgeOptions {
@@ -82,39 +88,37 @@ publishMods {
         requires {
             slug = "fabric-api"
         }
-        requires {
-            slug = "architectury-api"
-        }
     }
 
     curseforge("curseforgeForge") {
         from(curseForgeOptions, forgeOptions)
-        requires {
-            slug = "architectury-api"
-        }
     }
 
-
-    modrinth("modrinthFabric") {
-        from(modrinthOptions, fabricOptions)
-        requires {
-            slug = "fabric-api"
-        }
-        requires {
-            slug = "architectury-api"
-        }
+    curseforge("curseforgeNeo") {
+        from(curseForgeOptions, neoOptions)
     }
 
-    modrinth("modrinthForge") {
-        from(modrinthOptions, forgeOptions)
-        requires {
-            slug = "architectury-api"
+    if (providers.environmentVariable("MODRINTH_TOKEN").getOrNull() != null) {
+        modrinth("modrinthFabric") {
+            from(modrinthOptions, fabricOptions)
+            requires {
+                slug = "fabric-api"
+            }
+        }
+
+        modrinth("modrinthForge") {
+            from(modrinthOptions, forgeOptions)
+        }
+
+        modrinth("modrinthNeo") {
+            from(modrinthOptions, neoOptions)
         }
     }
 
     github {
-        file = project.provider { project(":forge").tasks.remapJar }.flatMap { it.archiveFile }
+        file = project.provider { project(":forge").tasks.jar }.flatMap { it.archiveFile }
         additionalFiles.from project.provider { project(":fabric").tasks.remapJar }.flatMap { it.archiveFile }
+        additionalFiles.from project.provider { project(":neoforge").tasks.jar }.flatMap { it.archiveFile }
         repository = "${github_repo}"
         accessToken = providers.environmentVariable("GITHUB_TOKEN")
         commitish = providers.environmentVariable("GITHUB_SHA").orElse("dryRun")

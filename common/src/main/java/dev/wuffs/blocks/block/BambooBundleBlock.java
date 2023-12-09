@@ -8,7 +8,6 @@ public class BambooBundleBlock extends Block
 
     public BambooBundleBlock() {
         super(Properties.of()
-
                 .strength(1.0f, 2.0f)
                 .sound(SoundType.BAMBOO)
         );

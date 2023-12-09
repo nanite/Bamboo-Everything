@@ -8,9 +8,9 @@ public class BambooDoorBlock extends DoorBlock
 {
 
     public BambooDoorBlock() {
-        super(Properties.of()
+        super(BlockSetType.BAMBOO, Properties.of()
                 .strength(3.0f, 3.0f)
-                .sound(SoundType.BAMBOO), BlockSetType.BAMBOO
+                .sound(SoundType.BAMBOO)
         );
     }
 }

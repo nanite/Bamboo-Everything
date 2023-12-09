@@ -8,10 +8,9 @@ public class BambooTrapDoorBlock extends TrapDoorBlock
 {
 
     public BambooTrapDoorBlock() {
-        super(Properties.of()
+        super(BlockSetType.BAMBOO, Properties.of()
                 .strength(3.0F, 3.0F)
-                .sound(SoundType.BAMBOO),
-                BlockSetType.BAMBOO
+                .sound(SoundType.BAMBOO)
         );
     }
 }
