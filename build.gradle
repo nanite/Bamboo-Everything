@@ -60,13 +60,13 @@ publishMods {
     }
 
     def forgeOptions = publishOptions {
-        file = project.provider { project(":forge").tasks.jar }.flatMap { it.archiveFile }
+        file = project.provider { project(":forge").tasks.remapJar }.flatMap { it.archiveFile }
         displayName = "${project.name} Forge ${mod_version}+mc${minecraft_version}"
         modLoaders.add("forge")
     }
 
     def neoOptions = publishOptions {
-        file = project.provider { project(":neoforge").tasks.jar }.flatMap { it.archiveFile }
+        file = project.provider { project(":neoforge").tasks.remapJar }.flatMap { it.archiveFile }
         displayName = "${project.name} NeoForged ${mod_version}+mc${minecraft_version}"
         modLoaders.add("neoforge")
     }
@@ -116,9 +116,9 @@ publishMods {
     }
 
     github {
-        file = project.provider { project(":forge").tasks.jar }.flatMap { it.archiveFile }
+        file = project.provider { project(":forge").tasks.remapJar }.flatMap { it.archiveFile }
         additionalFiles.from project.provider { project(":fabric").tasks.remapJar }.flatMap { it.archiveFile }
-        additionalFiles.from project.provider { project(":neoforge").tasks.jar }.flatMap { it.archiveFile }
+        additionalFiles.from project.provider { project(":neoforge").tasks.remapJar }.flatMap { it.archiveFile }
         repository = "${github_repo}"
         accessToken = providers.environmentVariable("GITHUB_TOKEN")
         commitish = providers.environmentVariable("GITHUB_SHA").orElse("dryRun")
