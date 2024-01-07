@@ -15,21 +15,21 @@ All things bamboo
 
 [[dependencies.bambooeverything]]
 modId = "neoforge"
-mandatory = true
+required = true
 versionRange = "[1,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.bambooeverything]]
 modId = "minecraft"
-mandatory = true
+required = true
 versionRange = "[1.20.4,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.bambooeverything]]
 modId = "architectury"
-mandatory = true
-versionRange = "[11.0.8,)"
+required = true
+versionRange = "[11.0.10,)"
 ordering = "AFTER"
 side = "BOTH"
