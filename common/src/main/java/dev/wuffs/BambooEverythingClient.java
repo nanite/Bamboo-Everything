@@ -9,7 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 
 public class BambooEverythingClient {
 
-    public static final ModelLayerLocation RAFT = new ModelLayerLocation(new ResourceLocation(BambooEverything.MOD_ID, "bamboo_raft"), "bamboo_raft");
+    public static final ModelLayerLocation RAFT = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(BambooEverything.MOD_ID, "bamboo_raft"), "bamboo_raft");
     public static void init(){
     }
 

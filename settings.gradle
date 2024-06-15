@@ -1,7 +1,7 @@
 pluginManagement {
     repositories {
-        maven { url "https://maven.wuffs.wtf/releases" }
-//        maven { url "https://maven.neomc.dev/releases" }
+        maven { url "https://maven.wuffs.dev/releases" }
+        maven { url "https://maven.neomc.dev/releases" }
 //        maven { url "https://maven.creeperhost.net/" }
         maven { url "https://maven.fabricmc.net/" }
         maven { url "https://maven.architectury.dev/" }
@@ -12,7 +12,6 @@ pluginManagement {
 
 include("common")
 include("fabric")
-include("forge")
 include("neoforge")
 
 rootProject.name = "BambooEverything"
