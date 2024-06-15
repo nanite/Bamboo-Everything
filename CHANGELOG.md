@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [21.0.0]
+
+- Update to 1.21
+- Dropped forge support
+
 ## [4.0.0]
 
 - Update neo,forge,fabric loader versions
