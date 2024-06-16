@@ -1,8 +1,7 @@
 pluginManagement {
     repositories {
-        maven { url "https://maven.wuffs.dev/releases" }
-        maven { url "https://maven.neomc.dev/releases" }
-//        maven { url "https://maven.creeperhost.net/" }
+        maven { url "https://maven.wuffs.dev/repository/Minecraft" }
+        maven { url "https://maven.neoforged.net/releases" }
         maven { url "https://maven.fabricmc.net/" }
         maven { url "https://maven.architectury.dev/" }
         maven { url "https://maven.minecraftforge.net/" }

@@ -33,8 +33,8 @@ allprojects {
     group = rootProject.maven_group
 
     repositories {
-//        maven { url "https://maven.wuffs.wtf/releases"}
-        maven { url "https://maven.neomc.dev/releases"}
+        maven { url "https://maven.wuffs.dev/repository/Minecraft" }
+        maven { url "https://maven.neoforged.net/releases" }
     }
 
     tasks.withType(JavaCompile) {
