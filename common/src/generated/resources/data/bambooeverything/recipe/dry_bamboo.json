@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 50,
+  "experience": 0.5,
+  "ingredient": {
+    "item": "minecraft:bamboo"
+  },
+  "result": {
+    "id": "bambooeverything:dry_bamboo"
+  }
+}

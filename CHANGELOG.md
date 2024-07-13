@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [21.0.2]
+
+- Fix fences not connecting
+- Update fabric and neoforge versions
+
 ## [21.0.0]
 
 - Update to 1.21

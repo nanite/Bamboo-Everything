@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "B": {
+      "item": "bambooeverything:dry_bamboo"
+    }
+  },
+  "pattern": [
+    "B B",
+    "BBB",
+    "B B"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bambooeverything:dry_bamboo_ladder"
+  }
+}
