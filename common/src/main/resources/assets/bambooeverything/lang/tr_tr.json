@@ -1,0 +1,25 @@
+{
+  "itemGroup.bambooeverything.creative_tab": "Bamboo Everything",
+  "block.bambooeverything.bamboo_ladder": "Bambu Merdiven",
+  "block.bambooeverything.bamboo_fence": "Bambu Çit",
+  "block.bambooeverything.bamboo_fence_gate": "Bambu Çit Kapısı",
+  "block.bambooeverything.bamboo_door": "Bambu Kapı",
+  "block.bambooeverything.bamboo_trapdoor": "Bambu Tuzak Kapısı",
+  "block.bambooeverything.bamboo_bundle": "Bambu Paketi",
+  "block.bambooeverything.bamboo_stairs": "Bambu Merdiven",
+  "block.bambooeverything.bamboo_slab": "Bambu Basamak",
+  "block.bambooeverything.bamboo_torch": "Bambu Meşale",
+  "item.bambooeverything.bamboo_raft": "Bambu Sal",
+
+  "item.bambooeverything.dry_bamboo": "Kuru Bambu",
+  "block.bambooeverything.dry_bamboo_ladder": "Kuru Bambu Merdiven",
+  "block.bambooeverything.dry_bamboo_fence": "Kuru Bambu Çit",
+  "block.bambooeverything.dry_bamboo_fence_gate": "Kuru Bambu Çit Kapısı",
+  "block.bambooeverything.dry_bamboo_door": "Kuru Bambu Kapı",
+  "block.bambooeverything.dry_bamboo_trapdoor": "Kuru Bambu Tuzak Kapısı",
+  "block.bambooeverything.dry_bamboo_bundle": "Kuru Bambu Paketi",
+  "block.bambooeverything.dry_bamboo_stairs": "Kuru Bambu Merdiven",
+  "block.bambooeverything.dry_bamboo_slab": "Kuru Bambu Basamak",
+  "block.bambooeverything.dry_bamboo_torch": "Kuru Bambu Meşale",
+  "item.bambooeverything.dry_bamboo_raft": "Kuru Bambu Sal"
+}
