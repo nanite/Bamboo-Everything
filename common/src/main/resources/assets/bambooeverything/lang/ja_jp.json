@@ -1,0 +1,25 @@
+{
+  "itemGroup.bambooeverything.creative_tab": "Bamboo Everything",
+  "block.bambooeverything.bamboo_ladder": "竹のはしご",
+  "block.bambooeverything.bamboo_fence": "竹のフェンス",
+  "block.bambooeverything.bamboo_fence_gate": "竹のフェンスゲート",
+  "block.bambooeverything.bamboo_door": "竹のドア",
+  "block.bambooeverything.bamboo_trapdoor": "竹のトラップドア",
+  "block.bambooeverything.bamboo_bundle": "竹の束",
+  "block.bambooeverything.bamboo_stairs": "竹の階段",
+  "block.bambooeverything.bamboo_slab": "竹のハーフブロック",
+  "block.bambooeverything.bamboo_torch": "竹の松明",
+  "item.bambooeverything.bamboo_raft": "竹のイカダ",
+
+  "item.bambooeverything.dry_bamboo": "乾燥した竹",
+  "block.bambooeverything.dry_bamboo_ladder": "乾燥した竹のはしご",
+  "block.bambooeverything.dry_bamboo_fence": "乾燥した竹のフェンス",
+  "block.bambooeverything.dry_bamboo_fence_gate": "乾燥した竹のフェンスゲート",
+  "block.bambooeverything.dry_bamboo_door": "乾燥した竹のドア",
+  "block.bambooeverything.dry_bamboo_trapdoor": "乾燥した竹のトラップドア",
+  "block.bambooeverything.dry_bamboo_bundle": "乾燥した竹の束",
+  "block.bambooeverything.dry_bamboo_stairs": "乾燥した竹の階段",
+  "block.bambooeverything.dry_bamboo_slab": "乾燥した竹のハーフブロック",
+  "block.bambooeverything.dry_bamboo_torch": "乾燥した竹の松明",
+  "item.bambooeverything.dry_bamboo_raft": "乾燥した竹のイカダ"
+}
