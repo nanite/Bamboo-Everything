@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [21.1.1]
+
+- Fix loot drops
+- Fix missing tags
+- Bump loader versions
+
 ## [21.1.0]
 
 - Updated to 1.21.1
