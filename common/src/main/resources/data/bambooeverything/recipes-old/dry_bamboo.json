@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "minecraft:bamboo"
-  },
-  "result": "bambooeverything:dry_bamboo",
-  "cookingtime": 50
-}
